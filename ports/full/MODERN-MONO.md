@@ -38,3 +38,15 @@ The runtime source stays outside the MCC repository. Archive extraction on the
 Windows host encountered Windows path-length restrictions in library tests; the
 native experiment extracts its source directly in Linux instead. This host issue
 does not establish a Mono runtime incompatibility.
+
+## Observed results, 2026-11-06
+
+Alpine 3.22.8 confirmed `i686` / APK `x86`, verified the source hash, installed
+Clang 20.1.8 and completed the C/C++ compiler ABI checks. The first native
+configuration then failed because `llvm-ar` was absent. This is a missing build
+tool, not evidence that the runtime cannot support x86. The guest setup now
+explicitly installs `llvm20`. In the same VM, installing that package allowed configuration
+to resume: CMake reported `CMAKE_SYSTEM_PROCESSOR=x86`, `TARGET_ARCH=x86` and
+`CMAKE_CROSSCOMPILING=FALSE`, then began its native header/function checks.
+The configure/build result is still pending. No managed-library or MCC runtime
+result exists yet.

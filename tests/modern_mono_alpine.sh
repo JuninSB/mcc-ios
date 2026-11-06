@@ -10,7 +10,7 @@ cat /etc/alpine-release
 printf '%s\n' \
     'https://dl-cdn.alpinelinux.org/alpine/v3.22/main' \
     'https://dl-cdn.alpinelinux.org/alpine/v3.22/community' > /etc/apk/repositories
-apk add --no-progress ca-certificates cmake ninja clang build-base python3 zlib-dev linux-headers
+apk add --no-progress ca-certificates cmake ninja clang llvm20 build-base python3 zlib-dev linux-headers
 mkdir -p /root/modern-mono
 cd /root/modern-mono
 wget -q http://10.0.2.2:8766/runtime-v10.0.0.tar.gz -O runtime.tar.gz

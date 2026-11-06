@@ -515,7 +515,7 @@
     {
       "date": "2026-11-06",
       "title": "Experimento de compilação do Mono moderno iniciado",
-      "detail": "Fontes oficiais .NET 10 ainda possuem caminhos x86 e musl. Adicionado experimento reproduzível de CMake nativo no Alpine 3.22 x86, com fonte fixada por SHA-256. Runtime completo, bibliotecas gerenciadas e execução de MCC continuam pendentes; nenhum marco integral marcado como concluído."
+      "detail": "Fontes oficiais .NET 10 ainda possuem caminhos x86 e musl. Experimento com fonte fixada por SHA-256 iniciou no Alpine 3.22.8 x86. A primeira configuração falhou por llvm-ar ausente; adicionado llvm20 e retomado na mesma VM. CMake confirmou TARGET_ARCH=x86 e iniciou verificações nativas. Build, bibliotecas gerenciadas e execução de MCC continuam pendentes; nenhum marco integral concluído."
     }
   ]
 }
