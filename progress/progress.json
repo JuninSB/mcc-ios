@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "PORT LOG / 023",
+  "revision": "PORT LOG / 024",
   "updated": "2026-11-06",
   "status": "Porte completo em andamento",
   "summary": "Meta: portar todos os recursos do MCC atual para iSH. O cliente de console existente é um protótipo parcial. TUI/minimapa, inventário, mundo, movimento, bots, scripts e integrações fazem parte da entrega completa.",
@@ -214,7 +214,7 @@
       "title": "Runtime e código moderno completos",
       "status": "pending",
       "scope": "Escopo integral solicitado, ainda não validado",
-      "evidence": "CoreLib do Mono moderno compilou para Linux x86 com zero erros/avisos no host. CMake passou no Alpine x86; VM encerrada a pedido do usuário para liberar RAM, com build nativo incompleto. Compilação cruzada no Windows em investigação. Execução do runtime e MCC completo ainda pendentes. Resultados em ports/full/MODERN-MONO.md.",
+      "evidence": "Compilação cruzada gerou Mono 10 ELF32 musl dinâmico e 171 DLLs gerenciadas. No Alpine x86, o runtime inicia e chega ao Main de um programa C#; o teste ainda falha por System.Native ausente. Corrigidas ligação estática e exportação de APIs, mantendo componentes habilitados. MCC completo e iSH real continuam pendentes. Detalhes em ports/full/MODERN-MONO.md.",
       "artifact": "MinecraftClient/MinecraftClient.csproj"
     },
     {
@@ -526,6 +526,11 @@
       "date": "2026-11-06",
       "title": "Emulador encerrado para liberar RAM durante builds no host",
       "detail": "QEMU encerrado após pelo menos 45 de 363 etapas nativas para liberar RAM. O usuário esclareceu depois que a VM pode rodar quando estiver fazendo trabalho necessário. Código e CoreLib salvos no host; objetos temporários da VM sem disco não preservados. Build nativo incompleto. Experimento de compilação cruzada no Windows reconheceu Clang e alvo Linux x86, ainda sem resultado final."
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Mono 10 nativo e bibliotecas gerenciadas compilados para Linux x86",
+      "detail": "Build cruzado Windows/Zig completou 411 etapas; sfx.proj produziu 171 DLLs. Corrigidos arquivos de versão, ligação dinâmica musl e exportação das APIs para componentes. Teste Alpine 3.22.8 x86/512 MB iniciou Mono 10 e alcançou Main C#. GDB localizou e permitiu corrigir falha de estado duplicado em EventPipe. Próximo impedimento: System.Native ainda ausente; teste não passa e nenhuma funcionalidade integral do MCC foi marcada como pronta."
     }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "zig": {
+    "version": "0.15.2",
+    "url": "https://ziglang.org/download/0.15.2/zig-x86_64-windows-0.15.2.zip",
+    "archive": "zig.zip",
+    "sha256": "3a0ed1e8799a2f8ce2a6e6290a9ff22e6906f8227865911fb7ddedc3cc14cb0c",
+    "executable": "zig/zig-x86_64-windows-0.15.2/zig.exe"
+  },
+  "cmake": {
+    "version": "4.1.2",
+    "url": "https://github.com/Kitware/CMake/releases/download/v4.1.2/cmake-4.1.2-windows-x86_64.zip",
+    "archive": "cmake.zip",
+    "sha256": "82730741149681597510a4bc7095da1460b472dac24eaf9c23ad7440f47753ab",
+    "executable": "cmake/cmake-4.1.2-windows-x86_64/bin/cmake.exe"
+  },
+  "ninja": {
+    "version": "1.13.1",
+    "url": "https://github.com/ninja-build/ninja/releases/download/v1.13.1/ninja-win.zip",
+    "archive": "ninja.zip",
+    "sha256": "26a40fa8595694dec2fad4911e62d29e10525d2133c9a4230b66397774ae25bf",
+    "executable": "ninja/ninja.exe"
+  }
+}

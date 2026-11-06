@@ -62,7 +62,7 @@ compilation work; its shutdown was based on an assumption that it was idle.
 Prefer host builds where practical to reduce pressure on this 4 GiB host.
 A Windows-host cross-configuration
 experiment using Zig 0.15.2, CMake 4.1.2 and Ninja 1.13.1 has identified the Linux
-x86 target and compiler ABI; configuration and linking are still unproven.
+x86 target and compiler ABI; see the completed cross-build results below.
 Restart a small Alpine guest later when an executable actually needs runtime
 validation or necessary native compilation.
 
@@ -95,6 +95,75 @@ zero errors. Output:
 SHA-256: `686976c01273b7651bc16aea825a386a7cd7d492f8c38249d48d19b0b7aebfc0`.
 
 This proves compilation of the modern Mono CoreLib for the target definitions.
-It does not prove execution, a complete library distribution, or MCC/iSH
-compatibility. Native runtime, library shims, remaining libraries, deployment and
-feature-specific tests are still required.
+It does not prove a complete runtime distribution or MCC/iSH compatibility.
+
+## Windows cross build and managed libraries
+
+`cross-tools.json` pins the official Windows ZIP downloads and their SHA-256
+checksums. Verify/download them under a temporary tools directory as `zig.zip`,
+`cmake.zip` and `ninja.zip`, then extract into its `zig`, `cmake` and `ninja`
+subdirectories respectively. Supply an existing GNU binutils directory whose
+tools support ELF x86; the experiment used the host's MinGW binutils.
+
+```text
+python ports/full/build-modern-mono-cross.py RUNTIME_SOURCE --tools-dir TOOLS --binutils-dir BINUTILS --output NATIVE_OUTPUT --log-file BUILD_LOG
+python ports/full/build-modern-corelib.py RUNTIME_SOURCE --libraries
+```
+
+These are development-host operations. They do not install an SDK/compiler on
+the phone. Both builds use one compilation worker by default on this 4 GiB host.
+The cross build generates native version files using upstream MSBuild targets;
+the standalone Windows CMake path otherwise omits Linux's `_version.c` and
+initially produces a fallback runtime-version header for version 6.
+
+The Windows cross build completed all 411 Ninja steps. Inspection found that
+Zig's default musl executable was static PIE, so the helper now requires dynamic
+linking and verifies the ELF32 x86 interpreter `/lib/ld-musl-i386.so.1`.
+Static musl's `dlopen` stub cannot load Mono components/native shims.
+
+The managed `sfx.proj` build completed in 1:24:56, with a formal summary of zero
+warnings/errors, and produced 171 shared-framework DLLs under the Linux musl x86
+runtime-pack directory. It also printed unresolved-reference messages during
+intermediate processing. Those messages remain recorded concerns to investigate
+and validate through execution; they are not dismissed by the final summary.
+
+## Bootstrap execution probe
+
+`tests/modern-runtime/MinimalProbe.csproj` checks 32-bit little-endian execution,
+CoreLib major version 10, dynamic-code support and object survival across GC.
+It returns the distinctive exit code 73 only after those checks. This does not
+test console I/O, networking, cryptography, scripting or any MCC feature.
+
+Build the probe with the host SDK, then package it using
+`tests/package_modern_smoke.py`. The package includes checksums, native components,
+CoreLib and the System.Runtime implementation facade. Use
+`tests/prepare_alpine_boot.py --startup-script tests/modern_mono_smoke.sh` for a
+512 MiB Alpine test guest; it powers off automatically on completion or failure.
+The external checksum file explicitly uses LF for BusyBox compatibility.
+Require both `MCC_MODERN_SMOKE_PASS` and `MCC_MODERN_SMOKE_EXIT=0`.
+
+The initial execution reached `mono-sgen --version` on Alpine 3.22.8 x86, but
+loading managed code aborted with SIGSEGV (exit 134). A separate diagnostic
+overlay, `tests/modern_mono_gdb.sh`, with `--debug-symbols` packaging, captured:
+
+```text
+ep_rt_mono_runtime_provider_init
+mono_metadata_signature_alloc(m=0x0)
+mono_image_alloc0(image=0x0)
+mono_image_lock(image=0x0)
+__pthread_mutex_lock(m=0x6ec)
+```
+
+The initialized executable and the component-linked `libmonosgen-2.0.so` were
+separate copies; the executable exported no Mono runtime APIs. The helper now
+adds `--export-dynamic` and checks the exports so components can use the running
+instance. After relinking, the probe reached `Program.Main` and progressed to
+`Assembly.GetName`, eliminating the EventPipe null-image failure. It then failed
+while resolving `System.Native` during culture/environment initialization; this
+native shim has not been built/packaged yet. The managed probe still exits 134,
+so the execution test is not passing. Components and diagnostics were not disabled
+to avoid the failure. GDB's own exit zero is a diagnostic result, not a passing
+managed-runtime test.
+
+Native library shims, runtime execution, deployment and full MCC feature tests
+are still required before this can replace the partial net40 alpha.
