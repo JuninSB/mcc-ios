@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "PORT LOG / 018",
+  "revision": "PORT LOG / 019",
   "updated": "2026-11-05",
   "status": "Em desenvolvimento",
   "summary": "Minecraft Console Client local para iSH em desenvolvimento. O executável principal já troca chat e comandos com Paper 1.21.11 nos testes Windows. Faltam validação no destino e autenticação real.",
@@ -165,7 +165,7 @@
       "title": "Concluir OAuth em uma conta Microsoft",
       "status": "pending",
       "scope": "Conta real · não validado",
-      "evidence": "Rejeição OAuth passou no Windows. No Alpine x86, o teste revelou trust store Mono sem certificados e exceção escapando da thread de timeout. Correções cert-sync/AutoTimeout em recompilação no guest. Conta Microsoft real ainda não validada.",
+      "evidence": "TLS e rejeição real de código OAuth inválido passaram no Alpine x86 após cert-sync e correção do AutoTimeout. Suíte concluiu com código zero. Autenticação bem-sucedida de conta Microsoft real continua pendente.",
       "artifact": "tests/ish_auth.py"
     },
     {
@@ -200,16 +200,16 @@
       "group": "network",
       "title": "Conectar e trocar chat em Minecraft Java 1.21.11",
       "status": "verified",
-      "scope": "Windows / executável principal / Paper real controlado",
-      "evidence": "Executável principal passou: INI, entrada 1.21.11, /version, chat de jogador com eco real e /exit com código zero. Modo offline de teste explícito no Paper do usuário. Não comprova Microsoft, assinatura, bots modernos ou iSH.",
+      "scope": "Windows e Alpine 3.22.8 x86/Mono / Paper real controlado",
+      "evidence": "Executável principal compilado com Mono passou no Paper real: INI, entrada, /version, chat com eco e /exit zero. Suíte de protocolo também passou no Alpine x86. Modo offline explícito de teste; Microsoft, assinatura e iSH real ainda não validados.",
       "artifact": "tests/ish_interactive_modern.py"
     }
   ],
   "nextSteps": [
-    "Resolver a permissão workflow do GitHub e executar build/testes no Alpine x86.",
-    "Validar criptografia, renovação de token e recuperação de falhas.",
-    "Testar no iSH real e medir tempo de início, memória e estabilidade.",
-    "Concluir login Microsoft legítimo e conectar a um servidor online compatível."
+    "Confirmar a versão do Alpine no iSH real e executar o cliente no iPhone.",
+    "Validar login Microsoft legítimo, propriedade do jogo, renovação e sessão online criptografada.",
+    "Implementar e validar assinatura de chat 1.21.11.",
+    "Medir memória, tempo de início e estabilidade no iSH."
   ],
   "timeline": [
     {
@@ -366,6 +366,11 @@
       "date": "2026-11-05",
       "title": "Testes de rede e criptografia passaram no Alpine; TLS revelou falha",
       "detail": "Fixtures de chat legado, queda TCP, AES-CFB8 e protocolo 774 passaram com Mono x86. Teste OAuth falhou por certificados Mono e exceção não capturada em AutoTimeout. Adicionados cert-sync e propagação ao chamador, sem desabilitar validação TLS. Novo build na mesma VM em andamento."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Suíte Mono completa e Paper real passaram; fonte publicada",
+      "detail": "MCC_ALPINE_TEST_PASS e MCC_ALPINE_RESUME_EXIT=0 confirmaram testes de protocolo, criptografia, exceções e TLS/OAuth negativo. Executável Mono também passou no Paper real com comando/chat/saída. Código publicado na branch ish-port, sem INSTRUÇÕES.txt nem alteração de workflows. Validação em iSH real continua pendente."
     }
   ]
 }

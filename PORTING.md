@@ -278,6 +278,7 @@ The same Mono-built main executable then passed the real Paper 1.21.11 interacti
 test: INI load, join, /version response, player-chat roundtrip and /exit status zero.
 This is verified on Alpine 3.22.8 x86 / Mono 6.14.1, not only on Windows.
 
-Publication plan: publish the tested source and docs on ish-port without changing
-any GitHub workflow. The CI file remains local because the current OAuth token lacks
-workflow scope. No workflow update or main-branch merge is included.
+Publication completed: source and docs are on remote branch ish-port, initially
+commit acd348166f423dc05dd54874f8e51c89e44d779b. No GitHub workflow was changed;
+the CI file remains local because the current OAuth token lacks workflow scope.
+No main-branch merge was performed, and INSTRUÇÕES.txt is absent from the published tree.
