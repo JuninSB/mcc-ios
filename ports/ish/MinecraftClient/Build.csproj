@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net40</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>MinecraftClient</AssemblyName>
+    <RootNamespace>MinecraftClient</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <PlatformTarget>x86</PlatformTarget>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <StartupObject>MinecraftClient.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net40" Version="1.0.3" PrivateAssets="all" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Compile Include="**/*.cs" Exclude="obj/**;bin/**;Resources/config/**;config/**" />
+    <EmbeddedResource Include="DefaultConfigResource.resx" />
+    <EmbeddedResource Include="Translations.resx" />
+  </ItemGroup>
+</Project>

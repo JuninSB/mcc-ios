@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#121713">
+  <title>MCC / iSH • Progresso do porte</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#"><span class="pixel-mark" aria-hidden="true"></span>MCC <span class="slash">/</span> iSH <span class="edition">PORT LOG</span></a><nav aria-label="Navegação"><a href="#features">Funcionalidades</a><a href="#timeline">Linha do tempo</a><a href="https://github.com/JuninSB/mcc-ios">GitHub ↗</a></nav></header>
+  <main>
+    <div class="eyebrow"><span class="dot"></span> DESENVOLVIMENTO ABERTO <span class="build-label" id="revision">Lendo dados…</span></div>
+    <section class="intro"><div><h1>Um terminal.<br>Um mundo inteiro.<span class="green"> No iPhone.</span></h1><p id="summary">Carregando o estado verificável do porte do Minecraft Console Client para iSH.</p></div><div class="terminal" aria-label="Objetivo de execução"><div class="terminal-top"><i></i><i></i><i></i><span>Alpine Linux · x86 / 32 bits</span></div><div class="terminal-body"><span class="dim">~/mcc-ios $</span> sh run.sh<br><span class="green">&gt;</span> Minecraft Console Client<br><span class="dim">Objetivo: executar localmente no iSH.</span><br><span class="terminal-note" id="target-note">Validação no destino: aguardando dados.</span></div></div></section>
+
+    <div id="notice" class="notice" role="status" hidden></div>
+    <div id="file-controls" hidden><label class="button file-button">Abrir arquivo de progresso<input id="file-input" type="file" accept="application/json,.json"></label><p class="small">Ao abrir o HTML diretamente, selecione progress.json. Via HTTP, a leitura e a atualização são automáticas.</p></div>
+
+    <section class="overview" aria-label="Resumo do progresso">
+      <article class="progress-card"><div class="card-top"><span class="eyebrow">MARCOS VERIFICADOS</span><span class="badge" id="project-status">Carregando</span></div><div class="progress-number"><strong id="percent">…</strong><span id="count">Aguardando dados</span></div><div class="progress-track" role="progressbar" aria-label="Marcos verificados" aria-valuemin="0" aria-valuemax="100" id="overall-progress"><div id="progress-fill"></div></div><p class="small" id="methodology"></p></article>
+      <article class="stat-card"><span class="eyebrow">AMBIENTE DE DESTINO</span><h2>iSH Shell</h2><span class="status pending" id="target-status">Aguardando dados</span><p id="target-detail"></p></article>
+      <article class="stat-card"><span class="eyebrow">PROTOCOLO EXERCITADO</span><h2 id="tested-version">…</h2><span class="status verified">Endpoint controlado</span><p id="versions-detail"></p></article>
+    </section>
+
+    <section class="content-section" id="features"><div class="section-heading"><div><span class="eyebrow">O QUE JÁ FUNCIONA</span><h2>Do código à evidência.</h2></div><div class="filters" role="group" aria-label="Filtrar marcos"><button class="active" data-filter="all" aria-pressed="true">Todos</button><button data-filter="verified" aria-pressed="false">Verificados</button><button data-filter="pending" aria-pressed="false">Pendentes</button></div></div><div id="groups"></div><p id="empty" class="small" hidden>Nenhum marco corresponde a este filtro.</p></section>
+
+    <section class="bottom-grid"><article class="panel"><div class="section-heading"><div><span class="eyebrow">PRÓXIMA FRONTEIRA</span><h2>O que falta provar.</h2></div><span class="outline-icon" aria-hidden="true">↗</span></div><ol id="next-steps" class="next-steps"></ol></article><article class="panel"><span class="eyebrow">POR QUE UM PORTE?</span><h2>O desafio é o runtime.</h2><p id="why"></p><div id="environment" class="environment"></div><div id="sources" class="sources"></div></article></section>
+
+    <section class="content-section" id="timeline"><div class="section-heading"><div><span class="eyebrow">DIÁRIO DE DESENVOLVIMENTO</span><h2>Cada avanço tem uma história.</h2></div><span class="small">Mais recente primeiro</span></div><div id="timeline-items" class="timeline"></div></section>
+    <section class="data-footer"><div><span class="dot"></span><span id="sync-status" role="status">Aguardando leitura</span><p class="small" id="updated">Nenhuma atualização carregada.</p></div><button class="button" id="refresh">Atualizar dados ↻</button></section>
+  </main><footer><span>MCC / iSH <span class="dim">· Progresso com evidências.</span></span><a href="progress.json">Ver dados JSON ↗</a></footer>
+  <noscript>Ative JavaScript para ler o arquivo progress.json e exibir o progresso.</noscript>
+</body>
+</html>

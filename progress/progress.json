@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "revision": "PORT LOG / 018",
+  "updated": "2026-11-05",
+  "status": "Em desenvolvimento",
+  "summary": "Minecraft Console Client local para iSH em desenvolvimento. O executável principal já troca chat e comandos com Paper 1.21.11 nos testes Windows. Faltam validação no destino e autenticação real.",
+  "methodology": "Percentual calculado pelos marcos verificados, todos com o mesmo peso. Não representa a quantidade de Minecraft implementada. Testes no Windows não comprovam execução no iSH.",
+  "target": {
+    "status": "Ainda não validado",
+    "detail": "Sem execução em dispositivo nesta etapa. O iOS, as syscalls e o desempenho do emulador ainda precisam de teste.",
+    "note": "Ainda não validado em iSH real."
+  },
+  "versions": {
+    "tested": "1.8.9 / 1.21.11",
+    "detail": "1.8.9 em fixture e 1.21.11 no Paper real com o executável principal. Caminho moderno experimental: chat/comandos, sem assinatura, bots, inventário ou mundo. iSH ainda não validado."
+  },
+  "why": "O iSH emula Linux x86 de 32 bits. O MCC atual exige .NET 10, sem runtime oficial para Alpine x86. O porte adapta uma base histórica para Mono e o terminal do iSH. Proot-distro não é uma dependência do MCC.",
+  "environment": [
+    "Alpine Linux",
+    "x86 / 32 bits",
+    "Mono",
+    "BusyBox ash",
+    "Execução local"
+  ],
+  "sources": [
+    {
+      "label": "Arquitetura do iSH ↗",
+      "url": "https://github.com/ish-app/ish/wiki/FAQ"
+    },
+    {
+      "label": "Plataformas .NET 10 ↗",
+      "url": "https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md"
+    }
+  ],
+  "groups": [
+    {
+      "id": "runtime",
+      "title": "01 / Runtime e configuração"
+    },
+    {
+      "id": "network",
+      "title": "02 / Conexão e comunicação"
+    },
+    {
+      "id": "target",
+      "title": "03 / Alpine e iSH"
+    },
+    {
+      "id": "auth",
+      "title": "04 / Autenticação e sessão online"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "build",
+      "group": "runtime",
+      "title": "Compilar o cliente para net40 / x86",
+      "status": "verified",
+      "scope": "Windows · .NET SDK",
+      "evidence": "Build do cliente real concluído com zero erros e zero avisos.",
+      "artifact": "ports/ish/MinecraftClient/Build.csproj"
+    },
+    {
+      "id": "startup",
+      "group": "runtime",
+      "title": "Iniciar o executável real",
+      "status": "verified",
+      "scope": "Windows · .NET Framework",
+      "evidence": "Executável iniciou com --help a partir de um diretório temporário, sem gerar configuração na raiz do repositório.",
+      "artifact": "MinecraftClient.exe --help BasicIO-NoColor"
+    },
+    {
+      "id": "config",
+      "group": "runtime",
+      "title": "Carregar configuração persistida",
+      "status": "verified",
+      "scope": "Windows · INI de teste",
+      "evidence": "O teste de integração carregou servidor, conta local de teste e versão do Minecraft a partir de um INI temporário.",
+      "artifact": "tests/ish_network.py"
+    },
+    {
+      "id": "handshake",
+      "group": "network",
+      "title": "Conectar e realizar handshake / login",
+      "status": "verified",
+      "scope": "Windows · endpoint local offline",
+      "evidence": "O endpoint confirmou handshake de protocolo 47 e pacote de início de login do executável real. Não comprova autenticação online.",
+      "artifact": "tests/ish_network.py"
+    },
+    {
+      "id": "receive",
+      "group": "network",
+      "title": "Receber chat comprimido",
+      "status": "verified",
+      "scope": "Windows · Minecraft 1.8.9",
+      "evidence": "A mensagem ISH_NETWORK_VERIFIED chegou ao stdout. Compressão exercitada com limiar 1 e com limiar 0.",
+      "artifact": "tests/ish_network.py --threshold 0"
+    },
+    {
+      "id": "send",
+      "group": "network",
+      "title": "Enviar chat pelo terminal",
+      "status": "verified",
+      "scope": "Windows · stdin interativo",
+      "evidence": "O teste escreveu no stdin e confirmou o pacote de chat ISH_OUTBOUND_VERIFIED no endpoint.",
+      "artifact": "tests/ish_network.py"
+    },
+    {
+      "id": "keepalive",
+      "group": "network",
+      "title": "Responder keep-alive",
+      "status": "verified",
+      "scope": "Windows · endpoint local",
+      "evidence": "O endpoint confirmou a resposta ao keep-alive com o identificador 12345.",
+      "artifact": "tests/ish_network.py"
+    },
+    {
+      "id": "exit",
+      "group": "network",
+      "title": "Encerrar por comando interativo",
+      "status": "verified",
+      "scope": "Windows · /exit",
+      "evidence": "O comando /exit encerrou o processo com código zero depois da troca de mensagens.",
+      "artifact": "tests/ish_network.py"
+    },
+    {
+      "id": "mono-build",
+      "group": "target",
+      "title": "Compilar com Mono no Alpine x86",
+      "status": "verified",
+      "scope": "Alpine 3.22.8 x86 / Mono 6.14.1 / QEMU",
+      "evidence": "install.sh compilou o MCC Release/x86 com xbuild e confirmou o executável. run.sh --help iniciou com Mono, inclusive sem HOME após correção do launcher. Testes de rede restantes ainda em andamento; não comprova iSH real.",
+      "artifact": "install.sh / run.sh / tests/ALPINE-X86.md"
+    },
+    {
+      "id": "ish-startup",
+      "group": "target",
+      "title": "Iniciar dentro do iSH real",
+      "status": "pending",
+      "scope": "iPhone · não executado",
+      "evidence": "Nenhum dispositivo iSH está acessível nesta sessão. A compatibilidade com syscalls e com o emulador permanece sem comprovação.",
+      "artifact": "scripts/diagnose-ish.sh"
+    },
+    {
+      "id": "launcher",
+      "group": "target",
+      "title": "Instalar e iniciar com sh run.sh",
+      "status": "pending",
+      "scope": "iSH · teste de execução pendente",
+      "evidence": "run.sh, install.sh e o diagnóstico passaram em sh -n. A instalação e a execução no destino ainda faltam.",
+      "artifact": "run.sh / install.sh"
+    },
+    {
+      "id": "resources",
+      "group": "target",
+      "title": "Medir memória, tempo e estabilidade",
+      "status": "pending",
+      "scope": "iSH · sem medição",
+      "evidence": "Não há métricas de RAM, tempo de início ou duração de sessão no iPhone. Não serão preenchidas com estimativas.",
+      "artifact": "PORTING.md"
+    },
+    {
+      "id": "oauth",
+      "group": "auth",
+      "title": "Concluir OAuth em uma conta Microsoft",
+      "status": "pending",
+      "scope": "Conta real · não validado",
+      "evidence": "Rejeição OAuth passou no Windows. No Alpine x86, o teste revelou trust store Mono sem certificados e exceção escapando da thread de timeout. Correções cert-sync/AutoTimeout em recompilação no guest. Conta Microsoft real ainda não validada.",
+      "artifact": "tests/ish_auth.py"
+    },
+    {
+      "id": "ownership",
+      "group": "auth",
+      "title": "Validar propriedade do jogo e perfil",
+      "status": "pending",
+      "scope": "Serviços Microsoft / Minecraft",
+      "evidence": "As verificações legítimas de Xbox Live, XSTS, propriedade e perfil foram preservadas. Falta exercício com uma conta real.",
+      "artifact": "ports/ish/MinecraftClient/Protocol/ProtocolHandler.cs"
+    },
+    {
+      "id": "encryption",
+      "group": "auth",
+      "title": "Manter uma sessão online criptografada",
+      "status": "pending",
+      "scope": "Servidor online · não validado",
+      "evidence": "AES-CFB8 do caminho Mono comparado diretamente com OpenSSL: cifragem, decifragem, fragmentação e EOF passaram no Windows. Falta sessão online criptografada real.",
+      "artifact": "ports/ish/MinecraftClient/Crypto/"
+    },
+    {
+      "id": "refresh",
+      "group": "auth",
+      "title": "Renovar o token de uma conta real",
+      "status": "pending",
+      "scope": "OAuth refresh · não validado",
+      "evidence": "Refresh token preservado e parâmetros de formulário escapados. Renovação real ainda não foi testada.",
+      "artifact": "ports/ish/MinecraftClient/Protocol/MicrosoftAuthentication.cs"
+    },
+    {
+      "id": "minecraft-1-21-11",
+      "group": "network",
+      "title": "Conectar e trocar chat em Minecraft Java 1.21.11",
+      "status": "verified",
+      "scope": "Windows / executável principal / Paper real controlado",
+      "evidence": "Executável principal passou: INI, entrada 1.21.11, /version, chat de jogador com eco real e /exit com código zero. Modo offline de teste explícito no Paper do usuário. Não comprova Microsoft, assinatura, bots modernos ou iSH.",
+      "artifact": "tests/ish_interactive_modern.py"
+    }
+  ],
+  "nextSteps": [
+    "Resolver a permissão workflow do GitHub e executar build/testes no Alpine x86.",
+    "Validar criptografia, renovação de token e recuperação de falhas.",
+    "Testar no iSH real e medir tempo de início, memória e estabilidade.",
+    "Concluir login Microsoft legítimo e conectar a um servidor online compatível."
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-05",
+      "title": "Ambiente e dependências mapeados",
+      "detail": "Confirmados .NET 10 no cliente moderno, x86 de 32 bits no destino e WSL desativado no host."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Selecionada uma base compatível com Mono",
+      "detail": "Importado o runtime histórico da branch previous, commit b3cc2351ee14d8e4fadc6f0e6115478872143c48. Faixa declarada: 1.4.6 a 1.18.2."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Scripts de instalação e execução criados",
+      "detail": "run.sh, install.sh e diagnóstico passaram na análise de sintaxe POSIX. O estado do usuário foi separado do código."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Primeiro executável compilado e iniciado",
+      "detail": "Resolvidas as referências de build e a inclusão de scripts de exemplo. O executável real iniciou no host com --help."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Autenticação e terminal adaptados",
+      "detail": "Login por navegador sem senha no terminal, leitura da URL de retorno, proteção contra impressão de tokens e remoção do watcher de cache."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Primeira troca de mensagens confirmada",
+      "detail": "Handshake, login local, chat comprimido nos dois sentidos, keep-alive e saída interativa passaram com o cliente real."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Falhas encontradas pelos testes corrigidas",
+      "detail": "Corrigidos compressão com limiar zero, Console.KeyAvailable em BasicIO e tratamento de EOF. Build final sem avisos."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Falha OAuth exercitada sem credenciais",
+      "detail": "Um código propositalmente inválido foi rejeitado pela Microsoft. O cliente reportou o erro e encerrou com status 1, sem solicitar senha ou lançar exceção de teclado."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Evidências e automação registradas",
+      "detail": "Documentação do porte e workflow Alpine x86 adicionados. O resultado desse workflow ainda não foi observado."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Painel de progresso conectado aos dados",
+      "detail": "Marcos, evidências, ambientes e linha do tempo reunidos neste arquivo JSON. O HTML recalcula os percentuais ao ler uma atualização."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Auditoria de credenciais e licenças",
+      "detail": "Removidos dumps de requisições/respostas OAuth e tokens de cache no debug. Falhas de refresh voltam ao login. Incluídos textos MIT do BouncyCastle e MS-PL do DotNetZip."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Criptografia Mono conferida contra OpenSSL",
+      "detail": "AES-128-CFB8 idêntico ao OpenSSL em teste independente no Windows, incluindo escritas fragmentadas e decifragem. Corrigido ReadByte no EOF. Não comprova sessão online nem execução no iSH."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Tentativa de CI bloqueada por permissão GitHub",
+      "detail": "Commit local d3967ac criado na branch ish-port. Push recusado porque o acesso HTTPS não possui workflow. Nenhuma CI foi executada. O arquivo de instruções permaneceu fora do commit."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Entrada do terminal recuperada após desconexão",
+      "detail": "Um leitor de stdin por processo, com fila limitada a uma linha, substitui leitores concorrentes. /exit funciona no prompt offline após kick ou falha de pacote."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Falhas TCP, compressão e cache exercitadas",
+      "detail": "Passaram os testes locais de queda TCP, pacote truncado, tamanho excessivo, tamanho descomprimido incorreto e cache JWT corrompido. Buffers limitados a 8 MiB; tokens inválidos voltam ao login sem exposição no debug."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Servidor de teste 1.21.11 confirmado como alvo",
+      "detail": "Usuário ofereceu servidor 1.21.11 no celular; IP/porta ainda não informados. Adicionado um marco obrigatório para essa versão. A base legada ainda não a implementa. O painel agora tem 17 marcos em vez de 16, sem retirar testes já verificados."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Primeiro componente de protocolo 1.21.11 testado",
+      "detail": "Respostas de controle da fase de configuração implementadas a partir das tabelas do MCC moderno. Harness net40/x86 passou. O componente ainda não conecta ao servidor: integração com login, play e chat permanece pendente. Percentual inalterado."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Texto NBT moderno preparado para chat e desconexão",
+      "detail": "Leitor com limites de profundidade/nós suporta raízes sem nome, listas e objetos. Testes de renderização pelo ChatParser e rejeição de dados inválidos passaram no Windows. Regressão 1.8.9 com compressão zero também passou. Login e play 1.21.11 continuam pendentes."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Pacotes de login 1.21.11 conferidos byte a byte",
+      "detail": "Login Start com UUID em ordem Java, Login Success com propriedades assinadas e resposta negativa de plugin implementados. Harness net40/x86 passou, incluindo dados truncados e login duplicado. Codec ainda não ligado à conexão real; autenticação online permanece pendente."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Transporte TCP de login/configuração 1.21.11 passou",
+      "detail": "Codecs conectados ao transporte real: fixture verificou protocolo 774, UUID, compressão zero, respostas de plugin/cookie e transição após configuração. Play/chat ainda não implementados nesse caminho. Paper oferecido pelo usuário estava iniciando e as tentativas de conexão LAN expiraram."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Primeiros controles de jogo 1.21.11 exercitados por TCP",
+      "detail": "Play12111 processa keep-alive, pong, texto de sistema/desconexão em NBT e confirma teleporte com posição/rotação relativa. Fixture conferiu respostas binárias reais após login/configuração. Chat de jogadores, Join Game, interface interativa moderna e teste no Paper ainda pendentes."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Entrada no mundo 1.21.11 e informações do cliente testadas",
+      "detail": "Cliente envia Client Information e responde a Join Game com Player Loaded. Ordem seaLevel/secure-chat conferida no bytecode oficial 1.21.11, pois o leitor do MCC moderno parecia omitir esse campo. Fixture TCP passou sem erros de build. Ainda faltam chat de jogadores e integração interativa."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Primeira entrada real no Paper 1.21.11",
+      "detail": "IP LAN corrigido pelo usuário. Status confirmou Paper/protocolo 774 e SSH acessível na porta 8022. O transporte do porte completou login/configuração e recebeu Join Game real, com seaLevel 63 e secureChat false. Teste Windows sem token Microsoft, encerrado após Player Loaded; não valida chat, conta online ou iSH."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Primeiro comando e resposta reais no Paper",
+      "detail": "O porte enviou /version e leu a resposta NBT do Paper 1.21.11-132. Fixture verificou o pacote de chat sem assinatura e bloqueio quando secureChat=true. Sem alteração da configuração do servidor. Chat de jogadores, assinatura e terminal moderno permanecem pendentes."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Mensagens reais de sistema recebidas; /say indisponível ao jogador",
+      "detail": "O Paper respondeu à tentativa /say do PortTest com command.unknown.command. O porte leu as mensagens de entrada e de erro reais. Não houve envio de say nem alteração de permissões. Diagnóstico distingue o marcador ecoado no erro de um envio bem-sucedido. Console via SSH aguarda usuário."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Say do console recebido do servidor real",
+      "detail": "Com o listener conectado, o usuário enviou say e o porte recebeu exatamente MCC_ISH_SERVER_MESSAGE_TEST oi. Implementado pacote 0x21 de chat de servidor, distinto do System Chat 0x77. Fixture moderna e regressão 1.8.9 passaram. Nenhuma afirmação de chat assinado ou teste em iSH."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Chat 1.21.11 integrado ao executável principal e validado",
+      "detail": "Program agora seleciona o console moderno quando mcversion=1.21.11. Teste real no Paper passou com INI, /version, chat de jogador com eco e /exit zero. Marco de chat 1.21.11 verificado no Windows: 9 de 17 (53%). Microsoft, assinatura e iSH continuam pendentes."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Alpine x86 iniciou no ambiente local de teste",
+      "detail": "QEMU oficial com SHA-512 conferido iniciou Alpine 3.22.8/i686 e chegou ao login root. Não simula iOS nem todas as syscalls do iSH. Mono ainda pendente: console ConPTY perdeu entrada e a revisão automática recusou inicialização com controle serial TCP. Nenhum marco adicional marcado como verificado."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Mono instalado no Alpine x86; build em andamento",
+      "detail": "Automação por apkovl iniciou sem entrada serial interativa nem novas portas de controle. Guest confirmou i686/x86/Alpine 3.22.8. install.sh instalou Mono 6.14.1-r0 e iniciou xbuild Release/x86. Aguardando resultado real; marco continua pendente."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Build Mono e launcher passaram no Alpine x86",
+      "detail": "Compilação xbuild Release/x86 concluída no Alpine 3.22.8 com Mono 6.14.1. Corrigido run.sh quando HOME não existe; ajuda do cliente iniciou. Loopback ausente no guest interrompeu a primeira fixture antes do cliente; ambiente corrigido e testes retomados. Marco de build verificado: 10 de 17 (59%)."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Testes de rede e criptografia passaram no Alpine; TLS revelou falha",
+      "detail": "Fixtures de chat legado, queda TCP, AES-CFB8 e protocolo 774 passaram com Mono x86. Teste OAuth falhou por certificados Mono e exceção não capturada em AutoTimeout. Adicionados cert-sync e propagação ao chamador, sem desabilitar validação TLS. Novo build na mesma VM em andamento."
+    }
+  ]
+}

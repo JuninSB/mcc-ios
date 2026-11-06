@@ -1,0 +1,68 @@
+// Run with Node.js and jsdom available on NODE_PATH. No browser or account required.
+const {JSDOM} = require('jsdom');
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const root = path.join(__dirname, '..', 'progress');
+const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const script = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+const initial = JSON.parse(fs.readFileSync(path.join(root, 'progress.json'), 'utf8'));
+const settle = () => new Promise(resolve => setImmediate(resolve));
+
+(async () => {
+  let payload = structuredClone(initial);
+  let fail = false;
+  let automaticRefresh;
+  const dom = new JSDOM(html, {url: 'http://localhost:8000/', runScripts: 'outside-only', pretendToBeVisual: true});
+  const window = dom.window;
+  window.setInterval = callback => { automaticRefresh = callback; };
+  window.fetch = async (_url, options) => {
+    assert.equal(options.cache, 'no-store');
+    if (fail) throw new Error('Test network failure');
+    return {ok: true, json: async () => structuredClone(payload)};
+  };
+  window.eval(script);
+  await settle();
+  const doc = window.document;
+  assert.equal(doc.getElementById('percent').textContent, '59%');
+  assert.equal(doc.querySelectorAll('.milestone').length, 17);
+  doc.querySelector('[data-filter="pending"]').click();
+  assert.equal(doc.querySelectorAll('.milestone').length, 7);
+  assert.ok([...doc.querySelectorAll('.milestone .status')].every(item => item.textContent === 'Pendente'));
+  doc.querySelector('[data-filter="all"]').click();
+  doc.querySelector('details').open = true;
+  payload.milestones.find(item => item.status === 'pending').status = 'verified';
+  payload.timeline.push({date: '2026-11-06', title: '<script>unsafe</script>', detail: 'Test only'});
+  doc.getElementById('refresh').click();
+  await settle();
+  assert.equal(doc.getElementById('percent').textContent, '65%');
+  assert.equal(doc.getElementById('count').textContent, '11 de 17 marcos');
+  assert.ok(doc.querySelector('details').open, 'Expanded evidence should remain open after refresh');
+  assert.equal(doc.querySelector('.event h3').textContent, '<script>unsafe</script>');
+  assert.equal(doc.querySelectorAll('.event script').length, 0, 'JSON content must not execute as HTML');
+  fail = true;
+  doc.getElementById('refresh').click();
+  await settle();
+  assert.equal(doc.getElementById('notice').hidden, false);
+  assert.equal(doc.getElementById('percent').textContent, '65%', 'Keep last valid data during network errors');
+  fail = false;
+  payload.milestones[8].status = 'bogus';
+  automaticRefresh();
+  await settle();
+  assert.equal(doc.getElementById('notice').hidden, false);
+  assert.equal(doc.getElementById('percent').textContent, '65%', 'Keep valid data after schema failure');
+  payload = structuredClone(initial);
+  automaticRefresh();
+  await settle();
+  assert.equal(doc.getElementById('notice').hidden, true);
+  assert.equal(doc.getElementById('percent').textContent, '59%');
+  dom.window.close();
+
+  const file = new JSDOM(html, {url: 'file:///progress/index.html', runScripts: 'outside-only'});
+  file.window.setInterval = () => {};
+  file.window.eval(script);
+  assert.equal(file.window.document.getElementById('file-controls').hidden, false);
+  assert.equal(file.window.document.getElementById('refresh').disabled, true);
+  file.window.close();
+  console.log('PASS: data rendering, calculated percentages, filters, JSON refresh, expanded evidence, safe text, stale-data recovery and local-file guidance.');
+})().catch(error => { console.error(error); process.exitCode = 1; });
