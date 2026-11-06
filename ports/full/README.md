@@ -15,3 +15,7 @@ No feature may be considered complete merely because a placeholder compiles,
 a gate disables it, a command reports unsupported, or its source is present.
 Full completion requires the modern runtime/source and all main-client features to
 build and execute on the target, with feature-specific behavior tested.
+
+The separate [modern Mono native experiment](MODERN-MONO.md) probes whether the
+current runtime can build on Alpine x86 while preserving JIT, reflection and
+threading. It is a feasibility check, not a replacement client or runtime release.

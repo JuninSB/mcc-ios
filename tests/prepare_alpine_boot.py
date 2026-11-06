@@ -9,6 +9,7 @@ import tarfile
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--output', required=True)
+parser.add_argument('--startup-script', help='Use an explicit guest-only startup script instead of the MCC suite')
 args = parser.parse_args()
 
 startup = b'''#!/bin/sh
@@ -42,6 +43,12 @@ python3 tests/ish_modern_session.py ports/ish/MinecraftClient/bin/Release/IshCry
 python3 tests/ish_auth.py ports/ish/MinecraftClient/bin/Release/MinecraftClient.exe --mono
 echo MCC_ALPINE_TEST_PASS
 '''
+
+if args.startup_script:
+    from pathlib import Path
+    startup = Path(args.startup_script).read_bytes().replace(b'\r\n', b'\n')
+    if not startup.startswith(b'#!/bin/sh\n'):
+        parser.error('startup script must begin with #!/bin/sh')
 
 with tarfile.open(args.output, 'w:gz') as archive:
     entry = tarfile.TarInfo('etc/local.d/mcc.start')

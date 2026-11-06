@@ -6,18 +6,26 @@ import socket
 import subprocess
 import zlib
 import struct
+import tempfile
 from ish_network import vi, read_vi, string
 
 parser = argparse.ArgumentParser()
 parser.add_argument('executable', type=pathlib.Path)
 parser.add_argument('--mono', action='store_true')
+parser.add_argument('--main-client', action='store_true')
 args = parser.parse_args()
-with socket.socket() as listener:
+with socket.socket() as listener, tempfile.TemporaryDirectory(prefix='mcc-modern-main-') as state:
     listener.bind(('127.0.0.1', 0))
     listener.listen()
     listener.settimeout(10)
-    command = (['mono'] if args.mono else []) + [str(args.executable.resolve()), '--modern-session', '127.0.0.1', str(listener.getsockname()[1])]
-    child = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    command = (['mono'] if args.mono else []) + [str(args.executable.resolve())]
+    if args.main_client:
+        config = pathlib.Path(state, 'test.ini')
+        config.write_text(f'[Main]\nlogin=PortTest\npassword=-\nserverip=127.0.0.1:{listener.getsockname()[1]}\nmcversion=1.21.11\nconsoletitle=\nsessioncache=none\nminecraftrealms=false\n')
+        command += [str(config), 'BasicIO-NoColor']
+    else:
+        command += ['--modern-session', '127.0.0.1', str(listener.getsockname()[1])]
+    child = subprocess.Popen(command, cwd=state, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding='utf-8', errors='replace')
     try:
         with listener.accept()[0] as connection:
             connection.settimeout(10)
@@ -42,7 +50,12 @@ with socket.socket() as listener:
             handshake = io.BytesIO(receive())
             assert read_vi(handshake) == 0 and read_vi(handshake) == 774
             uuid = bytes.fromhex('00112233445566778899aabbccddeeff')
-            assert receive() == b'\0' + string('PortTest') + uuid
+            hello = receive()
+            if args.main_client:
+                assert hello[:-16] == b'\0' + string('PortTest')
+                uuid = hello[-16:]
+            else:
+                assert hello == b'\0' + string('PortTest') + uuid
             send(b'\x04' + vi(17) + string('test:plugin') + b'data')
             assert receive() == b'\x02' + vi(17) + b'\0'
             send(b'\x05' + string('test:cookie'))
@@ -68,6 +81,9 @@ with socket.socket() as listener:
             assert receive() == b'\x2b'
             send(b'\x30' + join[:-1] + b'\x00')
             assert receive() == b'\x2b'  # No unsigned message leaked while secure-chat was true.
+            if args.main_client:
+                child.stdin.write('ISH_CHAT_OUTBOUND\n/version\n')
+                child.stdin.flush()
             chat = io.BytesIO(receive())
             assert read_vi(chat) == 8
             assert chat.read(read_vi(chat)) == b'ISH_CHAT_OUTBOUND'
@@ -98,10 +114,16 @@ with socket.socket() as listener:
             send(b'\x46' + vi(2) + struct.pack('>ddddddffi', 1, 2, -1, 0, 0, 0, 5, -5, 31))
             assert receive() == b'\x00' + vi(2)
             assert receive() == b'\x1e' + struct.pack('>dddffB', 11, 66, 19, 95, 5, 0)
-            send(b'\x20\x08\x00\x03bye')
-            send(vi(0x7fff) + b'\x2a')  # Harness marker after configuration transition.
+            if args.main_client:
+                child.stdin.write('/exit\n')
+                child.stdin.flush()
+            else:
+                send(b'\x20\x08\x00\x03bye')
+                send(vi(0x7fff) + b'\x2a')  # Harness marker after configuration transition.
         output, _ = child.communicate(timeout=10)
         assert child.returncode == 0, (child.returncode, output)
+        if args.main_client:
+            assert 'player fixture' in output and 'fixture-say' in output and 'Joined the 1.21.11 server' in output, output
         print('PASS: TCP protocol-774 login/configuration, client settings, Join Game/seaLevel/secure-chat fields, Player Loaded, play controls and NBT text.')
     finally:
         if child.poll() is None:

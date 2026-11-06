@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": "PORT LOG / 020",
-  "updated": "2026-11-05",
+  "revision": "PORT LOG / 021",
+  "updated": "2026-11-06",
   "status": "Porte completo em andamento",
   "summary": "Meta: portar todos os recursos do MCC atual para iSH. O cliente de console existente é um protótipo parcial. TUI/minimapa, inventário, mundo, movimento, bots, scripts e integrações fazem parte da entrega completa.",
   "methodology": "Marcos de mesmo peso, não porcentagem de funcionalidades do Minecraft. O escopo foi corrigido para incluir o MCC atual completo. Os 59% anteriores mediam somente o núcleo parcial. Nenhum módulo moderno completo está validado no iSH.",
@@ -506,6 +506,16 @@
       "date": "2026-11-05",
       "title": "Escopo corrigido para porte 100% do MCC atual",
       "detail": "Usuário reforçou que exige todos os recursos. Inventariados 18 módulos, 525 fontes C# e 19 dependências. Probe net472 falhou em Consolonia e MCP/ASP.NET; Magick.NET sem nativo Linux x86. Adicionados 14 marcos integrais pendentes. O percentual anterior cobria apenas o núcleo e não representava o porte completo."
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Alpha parcial de console publicada para testes",
+      "detail": "Release ish-console-alpha.1 inclui executável x86 pré-compilado, instalação de Mono/certificados e checksums. Executável extraído passou em fixtures 1.8.9 e 1.21.11, com chat, comandos e saída. Não inclui TUI/minimapa, inventário ou bots modernos e ainda não foi validado em iSH real. https://github.com/JuninSB/mcc-ios/releases/tag/ish-console-alpha.1"
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Experimento de compilação do Mono moderno iniciado",
+      "detail": "Fontes oficiais .NET 10 ainda possuem caminhos x86 e musl. Adicionado experimento reproduzível de CMake nativo no Alpine 3.22 x86, com fonte fixada por SHA-256. Runtime completo, bibliotecas gerenciadas e execução de MCC continuam pendentes; nenhum marco integral marcado como concluído."
     }
   ]
 }
