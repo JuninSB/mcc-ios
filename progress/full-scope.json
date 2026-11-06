@@ -1,0 +1,2473 @@
+{
+  "scope": "All current main MCC runtime features, including TUI, minimap, inventory, world, physics, commands, bots, scripting and integrations",
+  "targetFramework": "net10.0",
+  "note": "Source-file inventory and cached package assets are audit evidence only. No full module is marked ported by this report.",
+  "dependencies": [
+    {
+      "name": "Brigadier.NET",
+      "version": "1.2.13",
+      "cached": true,
+      "frameworks": [
+        "netstandard1.1",
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "DiscordRichPresence",
+      "version": "1.143.0",
+      "cached": true,
+      "frameworks": [
+        "net35",
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "Consolonia",
+      "version": "11.3.12.6",
+      "cached": true,
+      "frameworks": [
+        "net8.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "DnsClient",
+      "version": "1.8.0",
+      "cached": true,
+      "frameworks": [
+        "net472",
+        "net6.0",
+        "net8.0",
+        "netstandard2.0",
+        "netstandard2.1"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "DSharpPlus",
+      "version": "4.5.2",
+      "cached": true,
+      "frameworks": [
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "DynamicExpresso.Core",
+      "version": "2.19.3",
+      "cached": true,
+      "frameworks": [
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "FuzzySharp",
+      "version": "2.0.2",
+      "cached": true,
+      "frameworks": [
+        "net45",
+        "net46",
+        "net461",
+        "netcoreapp2.0",
+        "netcoreapp2.1",
+        "netstandard1.6",
+        "netstandard2.0",
+        "netstandard2.1"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "Magick.NET-Q16-AnyCPU",
+      "version": "14.15.0",
+      "cached": true,
+      "frameworks": [
+        "net8.0",
+        "netstandard20"
+      ],
+      "runtimeIdentifiers": [
+        "linux-arm64",
+        "linux-musl-x64",
+        "linux-x64",
+        "osx-arm64",
+        "osx-x64",
+        "win-arm64",
+        "win-x64",
+        "win-x86"
+      ]
+    },
+    {
+      "name": "MessagePack",
+      "version": "3.1.8",
+      "cached": true,
+      "frameworks": [
+        "net472",
+        "net8.0",
+        "net9.0",
+        "netstandard2.0",
+        "netstandard2.1"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "ModelContextProtocol",
+      "version": "1.4.1",
+      "cached": true,
+      "frameworks": [
+        "net10.0",
+        "net8.0",
+        "net9.0",
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "ModelContextProtocol.AspNetCore",
+      "version": "1.4.1",
+      "cached": true,
+      "frameworks": [
+        "net10.0",
+        "net8.0",
+        "net9.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "Microsoft.CodeAnalysis.CSharp",
+      "version": "5.6.0",
+      "cached": true,
+      "frameworks": [
+        "net10.0",
+        "net8.0",
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "Microsoft.AspNet.WebApi.Client",
+      "version": "6.0.0",
+      "cached": true,
+      "frameworks": [
+        "net45",
+        "netstandard1.3",
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "Microsoft.Windows.Compatibility",
+      "version": "10.0.10",
+      "cached": true,
+      "frameworks": [],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "Samboy063.Tomlet",
+      "version": "6.2.0",
+      "cached": true,
+      "frameworks": [
+        "net35",
+        "net6.0",
+        "net7.0",
+        "net8.0",
+        "net9.0",
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "Sentry",
+      "version": "6.8.0",
+      "cached": true,
+      "frameworks": [
+        "net10.0",
+        "net10.0-android36.0",
+        "net10.0-ios26.0",
+        "net10.0-maccatalyst26.0",
+        "net462",
+        "net8.0",
+        "net9.0",
+        "net9.0-android35.0",
+        "net9.0-ios18.0",
+        "net9.0-maccatalyst18.0",
+        "netstandard2.0",
+        "netstandard2.1"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "SingleFileExtractor.Core",
+      "version": "2.3.0",
+      "cached": true,
+      "frameworks": [
+        "netstandard2.0",
+        "netstandard2.1"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "starksoft.aspen",
+      "version": "1.1.8",
+      "cached": true,
+      "frameworks": [
+        "net45"
+      ],
+      "runtimeIdentifiers": []
+    },
+    {
+      "name": "Telegram.Bot",
+      "version": "22.10.2.1",
+      "cached": true,
+      "frameworks": [
+        "net6.0",
+        "netstandard2.0"
+      ],
+      "runtimeIdentifiers": []
+    }
+  ],
+  "projectReferences": [
+    "..\\ConsoleInteractive\\ConsoleInteractive\\ConsoleInteractive\\ConsoleInteractive.csproj"
+  ],
+  "embeddedResources": [
+    "Physics\\BlockShapeData.json",
+    "Mcp\\Prompts\\MccMcpOperatorPrompt.md",
+    "Tui\\MinimapBlockColors.json",
+    "Tui\\MinimapEntityCategories.json"
+  ],
+  "modules": [
+    {
+      "name": "ChatBots",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/ChatBots/Alerts.cs",
+          "sha256": "fdcb15100c09aa45486f09f7c8c8b7c9a759f5f184f045cadd90d22570a9f4e2"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AntiAFK.cs",
+          "sha256": "3a39d891642332e91d7f85dfde16834c475233241b1a1d385432d63df21e8550"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoAttack.cs",
+          "sha256": "5628f70c9b4a22b9c469a0caeed8c1bc0e00eb3eb4028e1794fe55a27326852d"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoCraft.cs",
+          "sha256": "b0d7e86730e8140e8b2e56ccd223d8b59bdeaddfad6ad4c8f510258dce33d3e5"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoDig.cs",
+          "sha256": "430b4660d90cbb521c13c76e9892e90156a502a02b9eae13f1a5cd65ee996277"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoDrop.cs",
+          "sha256": "7a1ea4f54ba52e3928df2fcb8ca16e1202f7a44b5e1c6ec03f75a049121ee8c8"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoEat.cs",
+          "sha256": "613b6f3db6ff27607041c591dc807825cc3848a533aca138dbefa134f1ac34de"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoFishing.cs",
+          "sha256": "1621cfe30fb96f0e61d43e6e2abdab29de6552fd25302d9914b756a55440d3bf"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoRelog.cs",
+          "sha256": "64b1fbda242e279eba0171fffdc8c8a06eefe4e21e354af3a70a7f0ea429ed6d"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoRelogRetryPolicy.cs",
+          "sha256": "f2ee8eddbf7b732c5cdca7e62477c6fb8dd013e1536fe1c7c9ddef1497ebd646"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/AutoRespond.cs",
+          "sha256": "6e643d1aaa805ec37f33efd02eff8b6c7508f2aab13dd8e74f736a279af99816"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/ChatLog.cs",
+          "sha256": "ca8572c3d7eecaa1b58ade4e7c78b6f0c2a1f4eee53b0ae19861f9944788de75"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/DiscordBridge.cs",
+          "sha256": "2985ccfdf166cfc0c978d4346e369193e4dc86b610e9f7da439ad360339a23d0"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/DiscordRpc.cs",
+          "sha256": "6cde6f2f695abc387a8d8ec68368d13692d38243e96c15bfe81ad982bfa6b0a6"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/Farmer.cs",
+          "sha256": "040af286ed57c43db287148892dd9d15b960f0af6baed1c53637dfe96c5d3b05"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/FileInputBot.cs",
+          "sha256": "f5ed67204e258236e8e55248fae1d68844a06c85dfe505348c1970e3dc53c850"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/FollowPlayer.cs",
+          "sha256": "03cbb3c5098105ce81ca4d529795a378540978cc74aa09082c273d1d2d927c91"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/HangmanGame.cs",
+          "sha256": "d3f4b11331c07f086c118e26142cf4e52a80b78d1104399ec5f2b886fb125ac2"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/ItemsCollector.cs",
+          "sha256": "a4c9528b61db6017c095c5f24b0cda165d0ef845503b6d9b314bfb150211696a"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/Mailer.cs",
+          "sha256": "03c6c73efa545127411ed37c3c05a44daa813071e6fb9087ab925a0e090b7a7d"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/Map.cs",
+          "sha256": "303f93c73cf37c23602d3822469f9ad5e969083584a16a627a6ed91f465c8a52"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/McpServer.cs",
+          "sha256": "b26b8411a14972e59939882c9fcf5ba755ee286def8520239f8e5737cbb83d6a"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/PlayerListLogger.cs",
+          "sha256": "fb8ca58d4655070d065b6b3201d5f4c6d5108dea2456fd50691df7c8631781a5"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/RemoteControl.cs",
+          "sha256": "e8f640c1fc23ab849e61b52f6c42a4b778bf723fb7d49b86763e638f25533011"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/ReplayCapture.cs",
+          "sha256": "118ff820ba8a55e34d3fd0fc00f169980aa0833f7f1171147784b9dd74837648"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/Script.cs",
+          "sha256": "74249fa65a71a943b6a24147b04b290bc3db50f7694b4f4e15fff2abd6d495f5"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/ScriptScheduler.cs",
+          "sha256": "184174d710f04c182f0314a50aaeee3b14bc71fe65637751d4f6f3e36f513b43"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/TelegramBridge.cs",
+          "sha256": "93b74cbda8fbd9023884a73ba8b2c1deb22536ffd517e5304d8a184e623f78af"
+        },
+        {
+          "path": "MinecraftClient/ChatBots/TestBot.cs",
+          "sha256": "809ed4fb40e1a27c677847ce3852654a0c6ba167067c7eba267da424cc1f0ffa"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "CommandHandler",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/AccountNickArgumentType.cs",
+          "sha256": "04a7d163669e17eab370a8a14dbdbe0a743a6b85c1b439aa0a12e4109eaf4c77"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/AutoCraftRecipeNameArgumentType.cs",
+          "sha256": "cfb59fb2236ffded5e4b2e03468c2bafdb11fc4475f7d1cd576b1410a9d56550"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/BotNameArgumentType.cs",
+          "sha256": "32d9ae71c8ac5809ef7c791ba854c80823044a420af77170bb0eb50423068087"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/EntityTypeArgumentType.cs",
+          "sha256": "88888666f56e1a7464be5d5e1435ea81bd7725fefccf28e37db8b4f81abddc41"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/FarmerCropTypeArgumentType.cs",
+          "sha256": "e41cc3aef9fe4f1cb8f5fc0a8bbcca044414ac2e364301d1dc3cf8a2e1d40897"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/HotbarSlotArgumentType.cs",
+          "sha256": "55199fd4fa58194e46377afe49a11ad308abbdbfc0e53310c21d02c50413d442"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/InventoryActionArgumentType.cs",
+          "sha256": "fd6864080714a25ab4f9ed8447ed96434a883b852b7be65673f32fa772d8476d"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/InventoryIdArgumentType.cs",
+          "sha256": "ffafe44eafc6f19c1630704bf64965e189adcbc9814e8754c70c5dd8fdf62f9a"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/InventorySlotArgumentType.cs",
+          "sha256": "ff49abfd23f1d145a532396ccffb0c4299f223c538e466f6ebd93b807c434219"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/ItemTypeArgumentType.cs",
+          "sha256": "295b3d6059077313ad9f42542f54a6ca84e4c49b37d09c9848135bc8c849e388"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/LocationArgumentType.cs",
+          "sha256": "1085c6ac6f11b0fa6302d691519a59eb8670e392a084d3568b00eac946259bda"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/MapBotMapIdArgumentType.cs",
+          "sha256": "96020b1f5b6b0e06c12b27ce8c17db278061919ccd2b7dc9555f5bbca3ad3d34"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/PlayerNameArgumentType.cs",
+          "sha256": "2cedd164df83337175028cd992e45fc773cde037390c4496ab618e779357306b"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/ScriptNameArgumentType.cs",
+          "sha256": "5fe7d87089f064e98f43c8d25c9665faad765df598675de8c234ce73529d4956"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/ServerNickArgumentType.cs",
+          "sha256": "fc284e2a250ed8f0002e5a1a2a6eacc4d2831b97e37e782f357a74f1b49ad81e"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/ArgumentType/TupleArgumentType.cs",
+          "sha256": "f625ebb583eab89e14b5dfa3b25c80454e58ffaa732da3f76366d170fb7e496e"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/CmdResult.cs",
+          "sha256": "505bb43a7711afc9112c74cd40de4f018538f416ea1d578b31a8bd256c5b369a"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/MccArguments.cs",
+          "sha256": "e37d8873eb491851e808beece266d833342f6e0d5a38d46ac0512769dc31b361"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/Patch/CommandDispatcherExtensions.cs",
+          "sha256": "b2231d506abf974f4e688ae454d71496debfc912474157471c2e0db92237e3e6"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/Patch/CommandNodeExtensions.cs",
+          "sha256": "37c222c2bff0ffc72140a9a9353a07af026f2ae966aa28d42f090addec12b1a4"
+        },
+        {
+          "path": "MinecraftClient/CommandHandler/SuggestionTooltip.cs",
+          "sha256": "2336cf4a47781a3b8773c0b26151fe99a10de7af5bc93be59bfa61125bca70d3"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Commands",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Commands/AchievementCommand.cs",
+          "sha256": "87cd479074251203e40dec6c4afae245c51c78319032ca9f3877be44e06d858b"
+        },
+        {
+          "path": "MinecraftClient/Commands/Animation.cs",
+          "sha256": "c6e64f5ea31a388fbe57b162df7c0556704dbbb27fd285e9185bfd129918081c"
+        },
+        {
+          "path": "MinecraftClient/Commands/Bed.cs",
+          "sha256": "31dabae00d4942e86ab9b6dfba93546985312ca0a3d440de28076a23b638144d"
+        },
+        {
+          "path": "MinecraftClient/Commands/BlockInfo.cs",
+          "sha256": "8e854f6db2d8f29c525326e85f0ec5df5ec377ba3af0faeafc32152d849de836"
+        },
+        {
+          "path": "MinecraftClient/Commands/Book.cs",
+          "sha256": "1c14b2c0829d5e77d785d62244c906f81e0492cb782485384cc93dbf6c0400ca"
+        },
+        {
+          "path": "MinecraftClient/Commands/Bots.cs",
+          "sha256": "5a283d172388b07961b4c3d1ad8d396dc06fd2163810ececb3e567fee285a2a7"
+        },
+        {
+          "path": "MinecraftClient/Commands/ChangeSlot.cs",
+          "sha256": "b12693774a41e43e140ff7dfc78e2a1a0b1d2fa5938630767e14b1a1b4a75f6c"
+        },
+        {
+          "path": "MinecraftClient/Commands/Chunk.cs",
+          "sha256": "bd0fb06c107f9a1edf9c832589f87cf3444d4b7a96b8a76412b17ecd15ab9eb2"
+        },
+        {
+          "path": "MinecraftClient/Commands/ClearConsole.cs",
+          "sha256": "59e89b5ceee360d48b6ba2cb3c5d45fab39071230bf4393461ffd1ba9b743cf8"
+        },
+        {
+          "path": "MinecraftClient/Commands/Connect.cs",
+          "sha256": "c5102b7438d25120da194df9b2ff72f306c257635ed1e6beedaf2a1daea1e9f3"
+        },
+        {
+          "path": "MinecraftClient/Commands/ConsoleChat.cs",
+          "sha256": "d3bbb22b4cd28a5d484d06bacc7663fcd7d5b85027eaa9e51ea9f18bb1add04b"
+        },
+        {
+          "path": "MinecraftClient/Commands/Debug.cs",
+          "sha256": "9634e4e558ebd5b01154d38b8e9619583adaf6619307a0e89054b101fb9ba2f3"
+        },
+        {
+          "path": "MinecraftClient/Commands/Dialog.cs",
+          "sha256": "caf5933bb19f7645e9d005ed11c28405d667f9a5f0271674ef732299833610c5"
+        },
+        {
+          "path": "MinecraftClient/Commands/Dig.cs",
+          "sha256": "1ac8ae7f18a1174321b2077f78a6defe1635697a613f92f302e32f63e1792e17"
+        },
+        {
+          "path": "MinecraftClient/Commands/DropItem.cs",
+          "sha256": "b4a3d1db2e50ed05db2e31bf95bf3d73272dbe1a95bf19639a2f9dcc5edf8caf"
+        },
+        {
+          "path": "MinecraftClient/Commands/EffectsCommand.cs",
+          "sha256": "03eef3374dba5be0b54eb646733cf4e6591f580a17e8d73f6c1f58fc94311111"
+        },
+        {
+          "path": "MinecraftClient/Commands/Enchant.cs",
+          "sha256": "eb23cab105e259e2689bcfd9b314d1ce749b56a44473d3ce6dd59a70debea58c"
+        },
+        {
+          "path": "MinecraftClient/Commands/Entitycmd.cs",
+          "sha256": "09258a8ca94da8c8e468f69634c796050a5750f546d8833e94d964df6179367b"
+        },
+        {
+          "path": "MinecraftClient/Commands/ExecIf.cs",
+          "sha256": "a3b90b01723ee299330332b149c1385ff568a38dd5970e941b50c44d53aba093"
+        },
+        {
+          "path": "MinecraftClient/Commands/ExecMulti.cs",
+          "sha256": "053d25bbbe300c281f1ddf3e50144c61d964e5df57179408835b3f0ea167c092"
+        },
+        {
+          "path": "MinecraftClient/Commands/Exit.cs",
+          "sha256": "77a40618e9453303751619e4c05b2922f0d84c7773f6d4eef6c78840b25fea2a"
+        },
+        {
+          "path": "MinecraftClient/Commands/Health.cs",
+          "sha256": "eb0ef99d83736015d9f198a75336196583143212ca0f2e9c732d92a9f21524cc"
+        },
+        {
+          "path": "MinecraftClient/Commands/Help.cs",
+          "sha256": "b79c341dcb9d4a76c11e3a6e75d6511b183c312d4ee8b3f6ed636ed3ba144deb"
+        },
+        {
+          "path": "MinecraftClient/Commands/Inventory.cs",
+          "sha256": "3e93f055f6ecc9243a013fd75a29e9de34f5fdbc4fc474696709b56332b719ca"
+        },
+        {
+          "path": "MinecraftClient/Commands/List.cs",
+          "sha256": "475b09793972ef780c4a7e990903c6e2b7a748363a7eca8d26b1fa82b12a7d7b"
+        },
+        {
+          "path": "MinecraftClient/Commands/Log.cs",
+          "sha256": "ac6e7f3745d7875f4ab4328a0a82eb93d1a7498249682b545922c63cac16f65c"
+        },
+        {
+          "path": "MinecraftClient/Commands/Look.cs",
+          "sha256": "283e4532c70605c03139ff98b412dd40b7c9646ac902f59ba990116779e28dc5"
+        },
+        {
+          "path": "MinecraftClient/Commands/Minimap.cs",
+          "sha256": "b153c483f4feb7b3d658a9bdae1e241f93146659319451d2d63066a02e4ed250"
+        },
+        {
+          "path": "MinecraftClient/Commands/Move.cs",
+          "sha256": "373fc2f06965334a9cb1420f3f0a9e063c428ff0a4b11ed6d7c0f3c70bd86dce"
+        },
+        {
+          "path": "MinecraftClient/Commands/NameItem.cs",
+          "sha256": "9d6bf91e84866886694cadb35d0f08e64c599f242cf3719350a25e08fb3db543"
+        },
+        {
+          "path": "MinecraftClient/Commands/RecipeBook.cs",
+          "sha256": "1ddb69cc5a2078818e058f8c6bd6a653da656e2fb34dd779255b6c5388c27392"
+        },
+        {
+          "path": "MinecraftClient/Commands/Reco.cs",
+          "sha256": "b9bdc100000d33ae29f95b2d6e1ffda4bb70bb802d1ae0891d40a344cc03128f"
+        },
+        {
+          "path": "MinecraftClient/Commands/Reload.cs",
+          "sha256": "d15546109bab43495abec0063b7eea848a93dbcda685116f9a45439701eebc92"
+        },
+        {
+          "path": "MinecraftClient/Commands/Respawn.cs",
+          "sha256": "a2de5c254416b270941f436f53476127c3ea1ffbab99b73e0194666fbf5a3fea"
+        },
+        {
+          "path": "MinecraftClient/Commands/Script.cs",
+          "sha256": "d743084c26c822b179552d8e6c7ce8b69bbe967631bbdfe1b7bd8fe37733396e"
+        },
+        {
+          "path": "MinecraftClient/Commands/Send.cs",
+          "sha256": "4ecefb9243e7e2fa96da51eced59c4368e97cddecc800eb6ee8ce1ba1b0cef43"
+        },
+        {
+          "path": "MinecraftClient/Commands/Set.cs",
+          "sha256": "d92384cc2ecf52f618c62c5c76f4d327814cf53de0cfa07caa5a044c998d0ac9"
+        },
+        {
+          "path": "MinecraftClient/Commands/SetRnd.cs",
+          "sha256": "b2f73dd9ff08c19731f7233259316abfb7bd562949a3faac6e76c4ecae065abc"
+        },
+        {
+          "path": "MinecraftClient/Commands/Sneak.cs",
+          "sha256": "3962123939056b63977d18a6dcad70321d5fdbfe5caf7aec08430e6c0cd48868"
+        },
+        {
+          "path": "MinecraftClient/Commands/Tab.cs",
+          "sha256": "b0609de4ad6b30adf97e79323dcb2e0f556fba9afb49d7aba19400ef1edbb859"
+        },
+        {
+          "path": "MinecraftClient/Commands/Teams.cs",
+          "sha256": "bd4f12e3998a5de399e720b7ab0c0e4061b9a845c4487278167887dea9f82d2e"
+        },
+        {
+          "path": "MinecraftClient/Commands/Tps.cs",
+          "sha256": "b9037c1b8fd428a88e0cf5cac86078ea23b98681b82611092f8331dd4c085880"
+        },
+        {
+          "path": "MinecraftClient/Commands/Tryout.cs",
+          "sha256": "a0b533d4334cc0a23609389f376ff3494384a59504c4a930e7360be8d893b611"
+        },
+        {
+          "path": "MinecraftClient/Commands/Upgrade.cs",
+          "sha256": "72f607af3b1cf22a684ec055deecda16351ce84e1c18d0a67789134fdb11bf28"
+        },
+        {
+          "path": "MinecraftClient/Commands/Useblock.cs",
+          "sha256": "22703ee038979a2ff6996f004b56050f3adb770ccdaa2c4109852f21db182999"
+        },
+        {
+          "path": "MinecraftClient/Commands/UseItem.cs",
+          "sha256": "b9e4c536fc76578825b076ef47e2994b4aba6c1fca794337ccf403889c62b5a0"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Crypto",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Crypto/AesCfb8Stream.cs",
+          "sha256": "9e9dbf3022e1434c9b10c7bf0f0bb7b67debb1cd7885db5efa919b8bc95af74b"
+        },
+        {
+          "path": "MinecraftClient/Crypto/CryptoHandler.cs",
+          "sha256": "38d2db4f11af39f359280c2fc6b546f2b7aa0f081e84c994c22505149f991337"
+        },
+        {
+          "path": "MinecraftClient/Crypto/FastAes.cs",
+          "sha256": "c6fd85aa11ad4e31c0d757b5ee821ed8249e3eccb68d9a52ef08457f053bef99"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Dialogs",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Dialogs/DialogFormatter.cs",
+          "sha256": "fde4322e761a111b0be63c1871db4fd60aac7aa411b8f033d8299b99b97cd5e3"
+        },
+        {
+          "path": "MinecraftClient/Dialogs/DialogManager.cs",
+          "sha256": "619540d49e17ab034fe329586e231a956ef6219c7a3b1e2b8b8989ce4788bb6c"
+        },
+        {
+          "path": "MinecraftClient/Dialogs/DialogModels.cs",
+          "sha256": "125bae79414390eabbef26a7938390218e0832cba1fcd312ca3c4684ef91088c"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Inventory",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Inventory/BookContent.cs",
+          "sha256": "7a9540013d5bd405ce6c4c91ca9790f02b0dcaa88ada4f6c7c3475e15fafeeba"
+        },
+        {
+          "path": "MinecraftClient/Inventory/BookPage.cs",
+          "sha256": "0526c02f308f68cb1467159c74d5ae667a90d6fa4ca3bc2d5b76e01139520464"
+        },
+        {
+          "path": "MinecraftClient/Inventory/Container.cs",
+          "sha256": "fab42f617e56791257a50c75ee576bcfee10dc98de8009aca791c156729cf424"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ContainerExtensions.cs",
+          "sha256": "8c124c985ed50ba2aaea54da31fac0b23f539b744525a77d344507919c00236e"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ContainerType.cs",
+          "sha256": "291c95d351dba0b52325f213411c7ad0ed0676c7153d18141af78be5be912aff"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ContainerTypeExtensions.cs",
+          "sha256": "9db1d43c7d04fd1c557db220f425139068af1eec8ae8bbf551d29187457255c9"
+        },
+        {
+          "path": "MinecraftClient/Inventory/EffectData.cs",
+          "sha256": "f3cdbdc71423bf942533f76260f8c56153d8aa35daf802c04bde3741aeec464f"
+        },
+        {
+          "path": "MinecraftClient/Inventory/Effects.cs",
+          "sha256": "d35431cde553a76f72e5d18e1053c19d33fd186bcba58420dad16becdf33c7f3"
+        },
+        {
+          "path": "MinecraftClient/Inventory/Enchantment.cs",
+          "sha256": "959669d8fa4b6a85cf66356313127dc25c11b77d6b0d094290227220ca00dcbf"
+        },
+        {
+          "path": "MinecraftClient/Inventory/EnchantmentData.cs",
+          "sha256": "3b6998ec384cb273b6a118080c79c343c7b15ecc3937a1aed6a512b123ed4d36"
+        },
+        {
+          "path": "MinecraftClient/Inventory/EnchantmentMapping.cs",
+          "sha256": "77a0b936cdc6e3980e877176801f93b31345415382afc8743fc7e7af0e2f0870"
+        },
+        {
+          "path": "MinecraftClient/Inventory/EnchantmentPropertyInfo.cs",
+          "sha256": "7a585943954760f9a7c974bf916a3f6566079539b336b5551d4df40f6dcaf877"
+        },
+        {
+          "path": "MinecraftClient/Inventory/Enchantments.cs",
+          "sha256": "cffe1f4902d04dbac1dea0364beb2288b12be054058a0dea3025cd3ff170e193"
+        },
+        {
+          "path": "MinecraftClient/Inventory/Hand.cs",
+          "sha256": "ea061641488e4638053ab89bb6bd9f955c8ff7d5d942a0ba44930dca1b67c06e"
+        },
+        {
+          "path": "MinecraftClient/Inventory/Item.cs",
+          "sha256": "374224c0b15ca9ec2c2bd57de3231e01aee57b61ea427f48804e174aa3974ec9"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemMovingHelper.cs",
+          "sha256": "f5fce01b7dc2bb94b1cbddc84830cd8ee8d494280b1914ffd83b5f5b074b6148"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette.cs",
+          "sha256": "0e74e0f99778d02056d68d1eafb509c5c49b3b666b5103548d075d9b206a728b"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette110.cs",
+          "sha256": "eb1867715a7d9f7b1593eceeb27f011e003239958da8df8fb4530a5a8eeccc84"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette111.cs",
+          "sha256": "4ac591f341a0507b8ef4ac2a58098605cef6a73d73d6fe849b8e8ec589d67cda"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette112.cs",
+          "sha256": "7fc85dba1f0591e34990cee53e099fbf5cde9c8f9efee90c7b86dd5a33aa7add"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette113.cs",
+          "sha256": "0da4d9d795b71bd0f1a567e782c086f0537cc37d53bd5bda8f6235c4cda0acde"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1132.cs",
+          "sha256": "6accc16f69c9aced1631e4773e62fe97a4240b53b238786d44595959a9adc9df"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette114.cs",
+          "sha256": "86ac17a36392d22c8e530c2e610803292e3d46969dc3e4f358c5e9b98a9fbccc"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette115.cs",
+          "sha256": "21f822c9e5f8ffd6632f4a9007273ceeb90fd810841fdace19f5ed40e805dc13"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1161.cs",
+          "sha256": "13b55231ab5dac70b27bc584372eadcffd7b61fe40652c760b60d6b0849a1a78"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1162.cs",
+          "sha256": "84534bf7b3c0529fea82a27bb67e603559ffafcfa05e398d740032314df6d2cf"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette117.cs",
+          "sha256": "230f15234afba247eaad24e05b3b387b0e3f2230c87782fcc20ad43a8610989d"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette118.cs",
+          "sha256": "3e8e83f0127e3d3598132ba365bb1c8491987c72c691cc11cecb4b8061022960"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette119.cs",
+          "sha256": "c005a23093fa9981f4549f789c35f085dc92a2bbc024f58e5d3b3aed6fc22e98"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1193.cs",
+          "sha256": "4c7c83755bee9a4d0bfd2527883a11e583bf449c30722e910fdf617e7a1f6996"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1194.cs",
+          "sha256": "9465ba546b9ca19cd2ac82d02a161051642bedbaec1a4dcf634ce76f0f16c8a7"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette120.cs",
+          "sha256": "f9ad284a7d8a37842f82a814b1bdec01a2bc234855cf797cda7ec26375dbba2f"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1204.cs",
+          "sha256": "4b4c3c0adcb89f4c97a68efa886e9e61f6653957238c7fad077460063ccb630d"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1206.cs",
+          "sha256": "51f98e04512a73c8a0396e73bba4358d2f28edb770e2b9f59d7ff11aa820f670"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette121.cs",
+          "sha256": "a1631008064993eb51c228cec401e6657af46f32dc99a44185dbc85c46ec877e"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette12111.cs",
+          "sha256": "171f468197ea420453ff53579646a7f26fb8db290719fb62a768c9a017c7f0da"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1212.cs",
+          "sha256": "b95a4c29a2d90aa00cb573a1eaae20cc981bd1a372f8ed4e12413682553a80c1"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1214.cs",
+          "sha256": "b2fa84336ca63232ceecfa458232898c61ee7a1938cec5d97ba7f5c746950ce5"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1215.cs",
+          "sha256": "76534709e07817076a71f3c94c235a4b1b4b831bd22536ff315823eadf631732"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1216.cs",
+          "sha256": "0dcc3e4528df29bf4a46d22ca2149227cfb885ae3f3db5bfb80abd7b00ee534c"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1217.cs",
+          "sha256": "5311ab27413f357c59f69fa199efd87589292420cbef9905fbce22ea03bcd804"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette1219.cs",
+          "sha256": "d208c996f9a74880fbce4187f3df976c19ef19aacd19031d21c1e9bb3e8016cf"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette18.cs",
+          "sha256": "7b894858ddcb8d40755fc65c32357a10de3ce319ece71a83a8353881a0e6cc50"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette19.cs",
+          "sha256": "5da37e62659adf5f7953f39f7e1529a0caa16e4d1722d20458b95c3898dced89"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette261.cs",
+          "sha256": "83a5c53560c247a5b36a7e5dcabe89540e82af9af51ff01c34527adfadb91d1f"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPalette262.cs",
+          "sha256": "3bc54ce854d277a1e40c5c3c634f2f4cfcd41812d5c0d29b6f8503a0da816a9d"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemPalettes/ItemPaletteGenerator.cs",
+          "sha256": "29f3ee388d4c8cca65a32e7a48e57457c733983d569ef59a2e4a10c9948bfbee"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemRarity.cs",
+          "sha256": "96f7eb0f1e35ffb24922dcfa1293195082b4c69751ff912e4b5fe7e6323b3bcb"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemType.cs",
+          "sha256": "8a64267693fb5b95c0262d1ed3295c0b70d48f2380dd65162bb63185290748d5"
+        },
+        {
+          "path": "MinecraftClient/Inventory/ItemTypeExtensions.cs",
+          "sha256": "8955e8c3ba37ebd16c17066af90327aa1ae7a7c193de32b998f16dfc4b66b2c6"
+        },
+        {
+          "path": "MinecraftClient/Inventory/SuspiciousStewEffect.cs",
+          "sha256": "61e85ccdcce27850f37e601af43c1dc48bcc53b4e01bba989c2e59bfcd69db20"
+        },
+        {
+          "path": "MinecraftClient/Inventory/TrimAssetOverride.cs",
+          "sha256": "6b40b7f1bb323215fcc04865502747af42b4aeaacebe661d037d20e06d65bc36"
+        },
+        {
+          "path": "MinecraftClient/Inventory/VillagerInfo.cs",
+          "sha256": "e7297f147dce1fde53d56420b00d3be9de859080072e280db5ce8ce00f2091d4"
+        },
+        {
+          "path": "MinecraftClient/Inventory/VillagerTrade.cs",
+          "sha256": "23cb8c04c20fdfe8b943d271b2a3551a8cc8470e4cb57beaa38dd1fea4087161"
+        },
+        {
+          "path": "MinecraftClient/Inventory/WindowActionType.cs",
+          "sha256": "37d165a5e790790dea2dd71fbcd0326c80931de3e5b1a2a90d683bc2a28f6db7"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Logger",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Logger/FileLogLogger.cs",
+          "sha256": "ec5787d027e72fcd8e4a6e060ad100399e33a2e2fe033337b23c2e09db5ebfe4"
+        },
+        {
+          "path": "MinecraftClient/Logger/FilteredLogger.cs",
+          "sha256": "532981cdcf801ce13f5597055f3805f1dd3f18509d8e27509ff76f1ec5d6e2cb"
+        },
+        {
+          "path": "MinecraftClient/Logger/ILogger.cs",
+          "sha256": "ec9d92f0872b326094b4c22c49daafd90ba9c8ba584450460ab6052fa224245d"
+        },
+        {
+          "path": "MinecraftClient/Logger/LoggerBase.cs",
+          "sha256": "0e0529153a634a6250706a51188498805299b45a34255317a333c40fbf32b519"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Mapping",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Mapping/Block.cs",
+          "sha256": "435d8e28dca58ff1807a521ae5b526b7e67716df003920415119b4097f95bf8f"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockExtension.cs",
+          "sha256": "7a68b3d348dfcbefe254a784dd9c069bff4197b93742ed651dfd5e487c8e052f"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockHardness.cs",
+          "sha256": "b819c5cd8e1791373ca2d5892fd286e4cbffdb052183423b29500b7f30397831"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/BlockPalette.cs",
+          "sha256": "fc70561f5527590851f8357d1c469efad19b4f792d791a5abe878dbb21d10dd0"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/BlockPalette120.cs",
+          "sha256": "7a8e1679a5c73ca5d33f9306facce079eaa8054330fb1b02c53417134d92ecd1"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/BlockPaletteGenerator.cs",
+          "sha256": "c22f1c699ed7520fd0653b920e8f81c454428c6729652c63de099e0964d3670b"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/BlockStateDefinition.cs",
+          "sha256": "c8023f28c057d847eee070ac8e14b4f7f0345631ec399539444ab41106f4c1d6"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette112.cs",
+          "sha256": "74dbacd62ca493d5cbd5d85cabfd3b4a2779fe4bf6caa39c097c7ef6696dd45b"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette113.cs",
+          "sha256": "e71f5221ff33b219d4313671a164fb590cd18ae27a2cc2ffe6e6a70d94e901ee"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette114.cs",
+          "sha256": "cadab3290538cc36dd0d1532d4cb13c0d53eeb8a7e1be9968987a7130a869fef"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette115.cs",
+          "sha256": "2e28f028aced4a484e53bc48086c2d93f85f069a2923b7d344ce9fda0675e4a8"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette116.cs",
+          "sha256": "47e6751ff5359f9871fa78f77dad5730a4afc67cc7ff34b0332205137009e242"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette117.cs",
+          "sha256": "8cb5dc2dd24492d26196c9f0b285cb0e27fd7461c2a4031919d83098e123afcb"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette119.cs",
+          "sha256": "ee31cfbb1f7de8325dfea02d6b4b026db83151498b15c5c56347feb3fc87ff36"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1193.cs",
+          "sha256": "c1ed78536397b3e2dd101a481e2e37ba1944c917a10958c7bbf7624a9f36f2a3"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1194.cs",
+          "sha256": "e1719b08ee646b6dc57ccb34cd6bf34df81728c4ebc0bd06086ac5761d924918"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1204.cs",
+          "sha256": "848639a8cd00343926d434a84cb4cffb6bb0fd19b8c5208d38eb3a930b3f2375"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1206.cs",
+          "sha256": "e2a58583d68f722b5dc327359678b588392d3937c2d874ceafa88d29be9f1fa8"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1212.cs",
+          "sha256": "22d9da12f27024783d395049806062255fc9bf3f5e15328a3700622e08a52f75"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1214.cs",
+          "sha256": "62ce535f54a9021799251dc549b375e58a75a53daa944b60310159d73dcfbf3b"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1215.cs",
+          "sha256": "d6eb2999d4c1d1a34884931a3341fea64454b34e013370008f60e0da470e43b0"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1216.cs",
+          "sha256": "7187767f16f0bc52ba2081295ba0db6454f1c5c13b2351b4d64271d43f821438"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette1219.cs",
+          "sha256": "f9db35304678c8ee915da35209c0a9a6225489970e987a489811492cbdcac53d"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette261.cs",
+          "sha256": "f3ab5f3de6cb426935c42ac5eb3959ef762353f79fb071232ea93e9236ea1a4a"
+        },
+        {
+          "path": "MinecraftClient/Mapping/BlockPalettes/Palette262.cs",
+          "sha256": "e884067b2c86e076a9eca429645aa05e79e9ff3d68d73421219e4db2c365ed51"
+        },
+        {
+          "path": "MinecraftClient/Mapping/Chunk.cs",
+          "sha256": "5fb7613e8a5b769cc65c8883a2fb2105b8fc2ee433cba39808d70676115dbd91"
+        },
+        {
+          "path": "MinecraftClient/Mapping/ChunkColumn.cs",
+          "sha256": "4cfc8bcf148fb883b21970f5e11a6a465d34c53444eb97379b6f5d6ce03cbf9b"
+        },
+        {
+          "path": "MinecraftClient/Mapping/CombatEventType.cs",
+          "sha256": "0787754f23fa3b0e337dd710804b18463068be41d618571d774edb3d6d07a3c2"
+        },
+        {
+          "path": "MinecraftClient/Mapping/CommandBlockFlags.cs",
+          "sha256": "499c391dbef81e12b28db4b008177730de89c98ac0ef69ab1b29b214e550b382"
+        },
+        {
+          "path": "MinecraftClient/Mapping/CommandBlockMode.cs",
+          "sha256": "7e8383c0ae2d4eb70128adc8c7de260f869597b7e1ba2ec72456eedb17f71c5e"
+        },
+        {
+          "path": "MinecraftClient/Mapping/Dimension.cs",
+          "sha256": "07ec81902b9956065516df0ab959722df325c64ff42a0f0d8ec04d5b681fd21b"
+        },
+        {
+          "path": "MinecraftClient/Mapping/Direction.cs",
+          "sha256": "3dc42d09178df967e25c91f521f27446c213daf015f71a66d231933a42e2696d"
+        },
+        {
+          "path": "MinecraftClient/Mapping/DirectionExtensions.cs",
+          "sha256": "f53a13d0dd3de9f99a8f2e1a3e09f9679504d503fa5904ee23cfddb721bed343"
+        },
+        {
+          "path": "MinecraftClient/Mapping/Entity.cs",
+          "sha256": "91c35e38b77e1811085ac07430b8ccd66f4c55b7e95a1342c9c0f0697357a5a0"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalette.cs",
+          "sha256": "2fd44ff79185dfb5581bc84a91a363a8302c6a1f43fdb288f27115cd84e30d45"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette1122.cs",
+          "sha256": "b16c34578becf2277ebb6943186e3df986084791b60d1d14bbc93806b4ea5fcb"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette1191.cs",
+          "sha256": "93e78bb8276659f3ab541152a34ceb05bd6f4185e4dfede703f088277face41d"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette1193.cs",
+          "sha256": "127271e5151f2e73629a7bb764141249dc5217488037b0c0607d1ab278f54972"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette1194.cs",
+          "sha256": "bfc834ef6d245faf53824c2b7b4d4fae975e187197de927a975ecf5f8299b3fb"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette1206.cs",
+          "sha256": "43f319f31b01aa6dffcbeae83f3f48dda83ad1b7c21219ae36808973ea516db1"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette12111.cs",
+          "sha256": "3958182a652f22a80794fa1a55330fa8ca6fe3e66864a15871abd08b234c07ff"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette1215.cs",
+          "sha256": "3b0203d769e88a46394888813be9c95e64917a2dd8ce7b808f8300b0030de336"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette1219.cs",
+          "sha256": "7a0ef06f4201cd2736219ffbc504e7354c6bb007c7634f89112e93a8246d376c"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette18.cs",
+          "sha256": "998803da73d37dee4758508e01a785415a94d5718dd10af7470a21207622ecff"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetadataPalettes/EntityMetadataPalette261.cs",
+          "sha256": "b88e306b074186e28e4d7335c608b9a362578b7495d435f12459e69f31f1b005"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityMetaDataType.cs",
+          "sha256": "7f0aa9d4aa6c1d39db0004b6ebb78c6af12c5d51c76baa30cb9287cef3a43a25"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette.cs",
+          "sha256": "679ff33bc86eabeceb9fd370a9302ecca19e43859a2d3e16bece20ff52b991bf"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette11194.cs",
+          "sha256": "249dce15c143c005da8b198373190a4e52d85773992119e2df9951cbc27285cf"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette112.cs",
+          "sha256": "0ad0c1dc41d3bc56a3cc4e9128beb0678088ef05cfd065b7d7ee0329d8a2511e"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette113.cs",
+          "sha256": "3f44b0663b6c330d33a44b62f5e1a0cd78ebcbf5fff17876d98bdd3967762e66"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette114.cs",
+          "sha256": "d9ecf2430f6776a96f4d28e82ea9b31ebc6fa640191765e24eb39a765be8a2f7"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette115.cs",
+          "sha256": "046e2c97a10590ad410dc1fb51367ccc2b80519af5084b1c576c6b07e3589360"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1161.cs",
+          "sha256": "96c0885112bb7cb1fd1c14c60e8655a2ed781d75b3f1d533b9c3eed1fdac9c71"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1162.cs",
+          "sha256": "bc4e23af357ace629208d9f7e336b578e17a43bdde1496bb13a9381829ead421"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette117.cs",
+          "sha256": "673b5e88ce679ac6b054cdc3ad65e1134e5aa808d83f58274a32d880cd443a33"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette119.cs",
+          "sha256": "7084e6b95167f7ab3c3018fa245ea74e2d5b232f5f8b0441c0cf3711ea2fc601"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1193.cs",
+          "sha256": "4c833eb95cf08e5c6c8501233b6d4aa4957ba9eb71bc04259c454e2cc2b3a4d2"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette120.cs",
+          "sha256": "ab7690f49ca69f5eea2ce070b7804240d2190ddc58934920906ac854e5599658"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1204.cs",
+          "sha256": "7bcc1c7370bdef6ef5071a2108bd0858bb580cb788cd680a76612df1c48b02f1"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1206.cs",
+          "sha256": "b450be0aea4ffb4927c30f912f47ed64f68cccc1e35de421b302862b0f8692bb"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette12111.cs",
+          "sha256": "06df71a56e4aeda3ba9e3acbf64049510e9fc98064196a9e26752d03caf4296f"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1212.cs",
+          "sha256": "69bcea4f97f731d1b195b6052d5f2ee4a1640504b70a2e11455434b5c16c78ba"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1214.cs",
+          "sha256": "b122c04121ac6c42a661a54408419f8ed40a7a38d206481bb24dbfb380943ec6"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1215.cs",
+          "sha256": "a0427781b5b4e6e67ab5245c3c448b7685298a093ab1ae86506206eee8050935"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1216.cs",
+          "sha256": "e4c95f17add4bb33dbd69b415f7cab79c5068aa5435a23af98c1d6c54df49097"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette1219.cs",
+          "sha256": "2b8d2959b45a84ee11de2606f684e6b8a893c272558d70b8296f97ab88373458"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette18.cs",
+          "sha256": "486c2c9a4a8e38313485e5019ee87f6869447fc55df96111f2c68846ab04ca03"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette261.cs",
+          "sha256": "6f8328414d0d0644cd149451c2b1ac3039854eab429a29a02e861edee6b65209"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPalette262.cs",
+          "sha256": "03de515357cb50f5277f2b3f2f579a7970f6d91cda6d328e937b54e424320c83"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPalettes/EntityPaletteGenerator.cs",
+          "sha256": "1527e477abd0eae64bd70f958a7b51105b1a74f4efa8560069e879dd2006daea"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityPose.cs",
+          "sha256": "18263e3ead1e1135cc5fd673d573217b5135ec0ebc0edf1d5b2bdfc2a9f2e4a4"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityType.cs",
+          "sha256": "682d0994a70aa7c785dbaa347a6cde7cdba0c0d06f1093d57f8eb34f0371dfc1"
+        },
+        {
+          "path": "MinecraftClient/Mapping/EntityTypeExtensions.cs",
+          "sha256": "2067da64fc12f49c0464ddac866c1f619c0f837a6b1c2e44552350612e148c6b"
+        },
+        {
+          "path": "MinecraftClient/Mapping/InteractType.cs",
+          "sha256": "72161cd1a6fe6bba3740bd780752f2cbe7d44c81234e2ff03302fec17155fd74"
+        },
+        {
+          "path": "MinecraftClient/Mapping/Location.cs",
+          "sha256": "f028a622535f042bc57b0a0ac8788856e3ced09c52afe9c3da1a577fafe50169"
+        },
+        {
+          "path": "MinecraftClient/Mapping/MapIcon.cs",
+          "sha256": "adb4b7a1be86e19c3fc8d97f122158a641528a366d5c2b1116a2dd1da0994513"
+        },
+        {
+          "path": "MinecraftClient/Mapping/MapIconType.cs",
+          "sha256": "4a925a915f79445f03130aee0b9f31dafbfde56fed289dd3a91fcc73c867563c"
+        },
+        {
+          "path": "MinecraftClient/Mapping/Material.cs",
+          "sha256": "c23ded8fe56f114927e303389f927e065c6337e33e2d2d511c3c596abf988b77"
+        },
+        {
+          "path": "MinecraftClient/Mapping/Material2Tool.cs",
+          "sha256": "8a7aaadbaaec778a7e991a22eb39ba0928aa7945bf18c28765fd7e59452d5b8f"
+        },
+        {
+          "path": "MinecraftClient/Mapping/MaterialExtensions.cs",
+          "sha256": "5d49f44c8f853db3c0a1834697f98333b51ca074e94eb231e971411070239c68"
+        },
+        {
+          "path": "MinecraftClient/Mapping/MessageFilterType.cs",
+          "sha256": "39254935d6a5fc2c172df7d42c66649a901c1474d9705b6d3a1de9bd1ce91c72"
+        },
+        {
+          "path": "MinecraftClient/Mapping/MiningCalculator.cs",
+          "sha256": "109f0ff9b2736ac0aa2ed76ef6fa08d9f5af897e429bf5e46cc2d68eb7cd5678"
+        },
+        {
+          "path": "MinecraftClient/Mapping/Movement.cs",
+          "sha256": "7a4e40deeb604a2d9d7016e0b4a3c96b0d8b0b04fc9713d5b8b259eb92da0b4f"
+        },
+        {
+          "path": "MinecraftClient/Mapping/PlayerTeam.cs",
+          "sha256": "983e045a1978ea34e305b3f181b0585b391b6200e311553900718ca08a9b5a6a"
+        },
+        {
+          "path": "MinecraftClient/Mapping/RaycastHelper.cs",
+          "sha256": "7f20ad7f147b6f8e9451d1435167f89b4a9333095f9c8bab94e163f612c5e3ba"
+        },
+        {
+          "path": "MinecraftClient/Mapping/VillagerInfo.cs",
+          "sha256": "b300c9e9c95600c1f47de35143d26b2e0555570e47ce31761032ef61905543f3"
+        },
+        {
+          "path": "MinecraftClient/Mapping/World.cs",
+          "sha256": "f67846ea84674640987125757783136ce923ee5849f25908b4270b75ddee1a1c"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Mcp",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Mcp/IMccMcpCapabilities.cs",
+          "sha256": "08aa6341804dfb72c0ed14aa2bec993b4ca80c5a4c7bd9a2a8390f490c563849"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccEmbeddedMcpHost.cs",
+          "sha256": "399402bf0be9b38acaf812e7335fb21bf30347a032ad4cd3fa98925ee56816a0"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpCapabilities.cs",
+          "sha256": "81b76e1e8b279063c94b10a8cf7310dfbd7b3f6600379cdc1c1fd8d50d7beaeb"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpChatHistory.cs",
+          "sha256": "21e1a212641abdb952e3dd0ca00f37ba4f5f8f42cc2b6196f34fa6472f7d6688"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpConfig.cs",
+          "sha256": "1ecdafc1efad932182ce0383e7980db61666a187e61dc37556ed9110f24fea26"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpGuidanceProvider.cs",
+          "sha256": "08db4f5b06f42a575e776daf6d827a6000675626d65ec968d7856ae9454ae22f"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpPromptSet.cs",
+          "sha256": "522cd10f54f2e0db9c009a75876cb9c0c1495a3a356022825aef33dcd7496ecc"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpRecentEventStore.cs",
+          "sha256": "67e984d2db6672c76a75deafea90bcb26e253847679799042f150b6f38c82200"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpResult.cs",
+          "sha256": "34857d24db7b68fdf7884fc1727e175c62c7701dd2effa3d183e7374cd29eac5"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpRuntimeStateStore.cs",
+          "sha256": "c2c66d489ed3b2438cafb9e6f7a87e31d0539586efe68afd920ad8ae41c547fa"
+        },
+        {
+          "path": "MinecraftClient/Mcp/MccMcpToolSet.cs",
+          "sha256": "40f5bf4b7aeefb2630467de067d7ec32279b9cf0f370ff9a527854b951543ae6"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Physics",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Physics/Aabb.cs",
+          "sha256": "648ed62a025f6026b37d7eaed054f1b49ef83a708934c3c98af5afc9f1340177"
+        },
+        {
+          "path": "MinecraftClient/Physics/BlockShapes.cs",
+          "sha256": "d99446cb82c7d11f2a4ca5338589c0cfe3ca40a6017fd4c07cde95bacd183ec7"
+        },
+        {
+          "path": "MinecraftClient/Physics/CollisionDetector.cs",
+          "sha256": "5bfb501fb642e1b093c0fa07b234d477bc7fabd93a04d3b3aac49b72bd72c1c5"
+        },
+        {
+          "path": "MinecraftClient/Physics/MovementInput.cs",
+          "sha256": "aa29e24b25222ec804a2d4a9cf831b642aafd34dacb4f3381dda4159ca2fbbd2"
+        },
+        {
+          "path": "MinecraftClient/Physics/PhysicsConsts.cs",
+          "sha256": "135eec5f35d4a8668c63aa2a0462b1508becfa534f6fc454b4502a679f5331ec"
+        },
+        {
+          "path": "MinecraftClient/Physics/PlayerPhysics.cs",
+          "sha256": "57bd1a5968d7d00c0028c89eb613d427408d4806ce616f12799c118c54306f85"
+        },
+        {
+          "path": "MinecraftClient/Physics/Vec3d.cs",
+          "sha256": "9eea297eca5929603dddc8df40e78c29f6663a05e4347240ef5628c2dc02e65b"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Properties",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Properties/AssemblyInfo.cs",
+          "sha256": "c898eae09e29b968adbfc8ee401ba6a1aa628c7251fbbf03db53de0840287a9c"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Protocol",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Protocol/DataTypeGenerator.cs",
+          "sha256": "7c3450a2bcd9bb6d66cbf5f3f8024ea7d6d2c58d3f2baba696759eccf5dad792"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Dialogs/DialogNbtParser.cs",
+          "sha256": "00bab9cefc412cd04810de42edf0303882af9d8ec7b35eec3a1b78806b5eb4a4"
+        },
+        {
+          "path": "MinecraftClient/Protocol/EntityActionType.cs",
+          "sha256": "5e6b2ad856b15b604bd28cfbabbecff1f26315dbe28c0db901ef82f8379f332f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/GuidExtensions.cs",
+          "sha256": "5c1036d95aac60219b2347b22673e61a5506aea83d7879ebcb01ec3dc6f1325a"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/ConfigurationPacketTypesIn.cs",
+          "sha256": "db5eeaaa2a4940ec1fb18b8e8f10a6e1e88c7047b8af0ceb497eeec0cd2fd686"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/ConfigurationPacketTypesOut.cs",
+          "sha256": "c112ff6fe7976b0f669c6e83077d8a85c54523e5766a3b9952147dd810923a68"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/DataTypes.cs",
+          "sha256": "85e030682443a1cff712625da8caf23835eb868c8b88753106236ec16b70c4ea"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Forge/FMLHandshakeClientState.cs",
+          "sha256": "78d9d0f5b1df147684244b5200437e6e084038f5ae973521decdf3b8a065cbe9"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Forge/FMLHandshakeDiscriminator.cs",
+          "sha256": "4e489643a8e081f1c5e4eeae88881268c7a52c6c7b1d703cd7830c27bfe8b11b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Forge/FMLVersion.cs",
+          "sha256": "a9eb1e6b41104003054f78192fb4313afe434ccdadf073d05efbb1d545685e69"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Forge/ForgeInfo.cs",
+          "sha256": "cb3298d5b823b07a30e4a2c748b7021cc39845bb95f3160cf476442cc6f06870"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Packet/s2c/DeclareCommands.cs",
+          "sha256": "3ea7457d970677797880a7a20326cf70117ab86edcf46ff4dff45e949624f2c5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette110.cs",
+          "sha256": "3cd0febcf78d10795571f4b198f5c0274ec1bf9f84291ffe39c8484bfedaa0c1"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette112.cs",
+          "sha256": "e555087076fac310e01d20c5b946205e7a07da8e8e4e0ea1ad439d659f6f0cd0"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1122.cs",
+          "sha256": "0176efaa8eac587b8a11057d930fa6d9580bd0c3dd78d71cceb476530f54d369"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette113.cs",
+          "sha256": "397a7179ebf6cfb425adb83c3a4337eb698ad98e0d7182301f19f16570dda3ac"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette114.cs",
+          "sha256": "75ebeac5fd188475aab0c856fa8cfc663eaa3ddb3d55e96fdf1544ef07d5fc67"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette115.cs",
+          "sha256": "832718dd4c2d843155c4139407bae3e17a455130e4e3cb722693c83d1c9af5c7"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette116.cs",
+          "sha256": "c1d994c85e1181260f5a5aa7f7afc78fc722ef7e0aa082402cca09f603fedde6"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1162.cs",
+          "sha256": "fc6e98f40f9b42c192177ae1b5cf85585e5e2f67c5ba50d1dc7934c91f5a3086"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette117.cs",
+          "sha256": "10f6a59a3dc3b99644b527336ac3d32865e0a78fcb1368b84d2d5468b880ebf6"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette118.cs",
+          "sha256": "90d69ae267a6e281db8fb69220ad303b17367a47eccb31c7d42385967da81384"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette119.cs",
+          "sha256": "20ead0cf68d256342f6ea5db7a37a5b38c5eee9eec9db2a9ea3862a7ea54419b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1192.cs",
+          "sha256": "d9d81bd607892142414fba532ef477319f0a14a79c4bd51938b60e335db5aa18"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1193.cs",
+          "sha256": "e8cd59051e596d5fc82a2dbc2a45ff360b92d233b88ddf4add93bf48bc860dfa"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1194.cs",
+          "sha256": "9e1d146d48533272798ea7606badc78d66f45e768379be508df72e45776c8321"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1202.cs",
+          "sha256": "6bfc5187438be6d7783d62332d88846657e1a1202f8d73bdda85b5fef403978c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1204.cs",
+          "sha256": "a6856259cbd2b68f26360a98366190800d49fd9f7b8c50243bd69e97ba9347ca"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1206.cs",
+          "sha256": "c6517d45a5164e16e1de30c2ec10c2da89911bbbc14dfc0803df3f71c4703783"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette121.cs",
+          "sha256": "7688784083d5a2099a5944a171d7c3f1e4a3b98cdfaa791ba77464941a3ee73b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1212.cs",
+          "sha256": "57b28603f9baf92aca3a4f4965782522c30bdb5c0273f0633b0ba25a116f7a24"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1214.cs",
+          "sha256": "c1ff34f8456fce832906848490690bb1da6d03844b31b2fee801e413e147c5b0"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1215.cs",
+          "sha256": "fde1876324588dd812b40356f3ff3af21aa986c9f3ca07d791e1b4ad19a44e0f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1216.cs",
+          "sha256": "2efdd2d368d5d25ca9708b05eb2cf737964c0435d2972a65f79eb530d0863a8c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette1219.cs",
+          "sha256": "729a0d9a5dcde4a0ec7429eb4deea424ab64d4a7917e452fd8bccb7309cf63ad"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette17.cs",
+          "sha256": "93365c6f61ae18cca6d6850f4368ef962a5400eb24e32f4af03a4f94a14ef562"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette18.cs",
+          "sha256": "075c561e138e6d02f2927ce8277e3b5d0593d9ab59e0f0987fde698edfe4903d"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette19.cs",
+          "sha256": "1d8aa360f7fa59ac47220405b24b9324bf0694e7272df1c4cb7421ded2c19880"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPalette261.cs",
+          "sha256": "b8a32eb58086c54e8360af74f1d8c242504b925b08ba51d206361558fc8ea45b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketPaletteHelper.cs",
+          "sha256": "2800213ff70d7b2245ba46b4f52057ff47cbcaf63f22291e5da94cee8ca65b49"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketPalettes/PacketTypePalette.cs",
+          "sha256": "f691dd4fe98ae3b9af5b4ccfad8869164e328e25150c8b9a416b205b4829eefc"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketType18Handler.cs",
+          "sha256": "307f553748cb5d08810756c51570476db04cfbc439a7fd2d158134f7c8f57b8d"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketTypesIn.cs",
+          "sha256": "25712fdd2fadf353a304d74010a3ed06d6f2b22673b33c40b19b43e0b58b018a"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/PacketTypesOut.cs",
+          "sha256": "03c6a2ed24e87021d4975ddbb09b76b69c08e819dc9d7bf1ab32fd4f229c68c9"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Protocol16.cs",
+          "sha256": "b95600d9310cc1c2adaa964ddc2d7b1213f30b5d720f23f67e5c86b86e5261ec"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Protocol18.cs",
+          "sha256": "2008d1d21deda2555b6a5274e44b0b4b4d38b4b6c20397cb3ac04be8b2ba2e2c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Protocol18Forge.cs",
+          "sha256": "f8ea3496db5d73db59ac0c05c71cdf9cbe158878e84503975ed564fc4591b663"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/Protocol18Terrain.cs",
+          "sha256": "2cdcf58bf18e21c0b1f7706c39cbfb40262c31c1be0af658e133d8813b7886f7"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/SocketWrapper.cs",
+          "sha256": "7af4573dceb4e3702b09612302aad6b59881f076950c1bdb8ecca1d9dfbcfd1b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/AttributeModifiersComponent.cs",
+          "sha256": "2022065f778e3e7877b7bbbe4487218700fcc2bd8e820e911216a0213001bdad"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/BannerPatternsComponent.cs",
+          "sha256": "0f6a016be749b62a9e9ac6c0e0c62ca54f5b63be7b480b4179abe08277c7f5d5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/BaseColorComponent.cs",
+          "sha256": "309bc6956d02f114b63e33af3de4bedb63ce571ebf590d57ffd8fd05683ab3ed"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/BeesComponent.cs",
+          "sha256": "7ee81d72b13abc24dc6752d25dbe5a10918ac49b9e1f1d4f286b5e03b96448e5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/BlockStateComponent.cs",
+          "sha256": "81ae2623739b32711fd4cec8f02300e3fb1b7b8a993bc79bb6bf7d3075204ec9"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/BundleContentsComponent.cs",
+          "sha256": "b89df1199f4900941281b4f53d898a32401618ec2b35b0d4bc3ece6d80213114"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/CanBreakComponent.cs",
+          "sha256": "c905f7b25cc4f2c682ca215a2f2a49f68c056f0654e192b34578472df3991fec"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/CanPlaceOnComponent.cs",
+          "sha256": "886057390763ff4888b14d928bd5432d27e16567cfe277a4f0b866685dc32b37"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/ChargedProjectilesComponent.cs",
+          "sha256": "da8a21781cdeecd0b619738ff6b1230fee5669f572c6d17ff05d5d5374214a2c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/ContainerComponent.cs",
+          "sha256": "7eb8b3c2c347b1f40cd5a1b5aba3a129b097e84d3ff2cd56e705d5565e4f7c3c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/ContainerLootComponent.cs",
+          "sha256": "9be72876d8ba79b4ba7e526047175a933080637f61d0d81c96f5760ab9b4fa67"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/CreativeSlotLockComponent.cs",
+          "sha256": "5cfcd7400ac422f24833fbca85433a4a08335dd5d36479efc192412fd01f0831"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/CustomDataComponent.cs",
+          "sha256": "28bd62fb23d1a01df25ab75639ea40572031d0ec32d0746b5d760dfb880eef99"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/CustomModelDataComponent.cs",
+          "sha256": "70cce0a73490eaf0a4a4c1b214f3ad45b1a025de06e8a09f9662a7b874baf294"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/CustomModelDataComponent1206.cs",
+          "sha256": "a98cb4eadb233dbd5ef89aca7693bde3f5f4ca4109c697e925589758122b37b8"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/CustomNameComponent.cs",
+          "sha256": "53ac2a9802d6b9aa96c62de2d87ec76ddac8814c85d1d803ceeaa53ab79ac3df"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/DamageComponent.cs",
+          "sha256": "9f2e9529f7aa6273ccf826a229789fd8faaa35a828eafda85579baa8373ff57f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/DebugStickStateComponent.cs",
+          "sha256": "1fd5897f3e95df6b204bbd2d100f78af17a1b1fbb7b8492ac89dd8754f996c87"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/DyeColorComponent.cs",
+          "sha256": "89cf9234331517afe8e6c596846b3344c11dad5aca31163051cf106f05544177"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/EnchantmentGlintOverrideComponent.cs",
+          "sha256": "d4e54549df8d527568ee7090fae2a840dc884fb300c45d0fa2c7e41fc7842557"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/EnchantmentsComponent.cs",
+          "sha256": "ec12cdff9dfb89e1ab4ca48924b88c9510bcc13388714b3c78f510c350ab7ae5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/EntityDataComponent.cs",
+          "sha256": "51ae220a4816c1ddde50d2da7fe5fb47eecb454465d74e301f85e942b4983f3e"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/FireResistantComponent.cs",
+          "sha256": "efbc2e372b4124444f824dc36fe319cbeeccd8cd4ae63f1d350766e5d3b25e68"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/FireworkExplosionComponent.cs",
+          "sha256": "26b2110d2f68ba79a319fccc981a112e0242bbfb37f4340a69d552ec9494dcc7"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/FireworksComponent.cs",
+          "sha256": "861654dfd2e6bd5545e4b8d778f58d486f8e3378a3f41f76e89c8d9021b97f28"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/FoodComponent.cs",
+          "sha256": "373b100d3130bd8de9febf05ef062e5c1e3b28d416de6e6e437bc61ac694f402"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/HideAdditionalTooltipComponent.cs",
+          "sha256": "6d3bfebd4b154b79484d7da394d73e3b07c08353fa69cc0fad472e6503961023"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/HideTooltipComponent.cs",
+          "sha256": "0c9c8a0be819accfead8c9b9b1fddb25522643a6f9b1d3628297e369adbd886b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/InstrumentComponent.cs",
+          "sha256": "8940bf035ef1ebd1a03cf98a9177e66916abd7d8d6abeeaca6ee63bfd57fbd62"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/IntangibleProjectileComponent.cs",
+          "sha256": "7843193c23a99a5e4db135b8a3755c6271359c3cbbec8d7113a17fd4bd6143bd"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/ItemNameComponent.cs",
+          "sha256": "dbeb98543312e10898580cd4b14a5b2fb5699c198d7f771ff9fdf871714a641b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/LockComponent.cs",
+          "sha256": "037ac2c4f5e28dbb856f8b22d5c59937ba5c7ff1287a4e7e70d7e0f0ac034061"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/LodestoneTrackerComponent.cs",
+          "sha256": "a4c1d0b47af2d1e8a953018787f36552b5315af4e807aadb7864c6ef41215497"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/LoreComponent.cs",
+          "sha256": "e6b20e553fade4cc19070c684a46af1b63ae362a34bc8587771265a07a5a7f04"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/MapColorComponent.cs",
+          "sha256": "e924865ca108bbaf9ad101ed4bca54a222c3efe24149f757701f0988c2dfc606"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/MapDecorationsComponent.cs",
+          "sha256": "b5151f036b9a27869de0f052a704cbd20e85b4e1e04d55d3bf9e1e4a4ae6f0ba"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/MapIdComponent.cs",
+          "sha256": "aae89df2341cd683298bdf788b351fbc923c9732e6f46292c307d37b8746af29"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/MapPostProcessingComponent.cs",
+          "sha256": "378cb08727e1f1420418d04a99e1d4e22851bace843e4cf6e783aeb549f40ea5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/MaxDamageComponent.cs",
+          "sha256": "1224c454d26da0b13a6dec5dc58f7e7693552dc1ba3df247a3b6379002f72713"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/MaxStackSizeComponent.cs",
+          "sha256": "8fedf709fc216b747e0aa07cdea97eb96235a2fe213e1c0094c489710fddf026"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/NoteBlockSoundComponent.cs",
+          "sha256": "af420f59e28c5125c87f5ebbdd07e439a9517bada74b001ec6fa1b91a9733efe"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/OminousBottleAmplifierComponent.cs",
+          "sha256": "ea136f47ababe2b3742bcd6bea44e4e37088141c74a35dcb15fd47b4b8e2f188"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/PotDecorationsComponent.cs",
+          "sha256": "5e743e4bed1860cccd56865520e1ad3b93ce875f4653e33a9ab6ed5a4a6dea3c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/PotionContentsComponent.cs",
+          "sha256": "d6af83f80efde04f99b2dd17fdde5d226c15f8ca981cf6e726644041c6b8abb0"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/ProfileComponent.cs",
+          "sha256": "2cd366b66a0f9c231598ac4e24839ba0066fd9f85dc577574bd36d5375dab914"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/RarityComponent.cs",
+          "sha256": "6840829386a81cd28e59193d43d2bd333cb03dc82f67b69cad35e1a26811307b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/RecipesComponent.cs",
+          "sha256": "a9eaaef5a1c6478324f04e9918555e6ed7bf06266c54d5c9840e9b730d629e78"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/RepairCostComponent.cs",
+          "sha256": "46f507d8ae96aca5b52918075c09386f9ce870e2c82f8a0698834d81e65405e5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/StoredEnchantmentsComponent.cs",
+          "sha256": "8e5f4cc58f4dd273dd15eb9b1dc276ecab979e4cc477088b5b5ee9376a9ab1ea"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/SuspiciousStewEffectsComponent.cs",
+          "sha256": "e9b799dd2b3e75d09b4c04b9c4b4b9045d03a26996dab8aafabcc2fa03a1b209"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/ToolComponent.cs",
+          "sha256": "5db1e5401f00e9e08b36cfe0a29c638be6bf8248da5962763092174c80dda566"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/TrimComponent.cs",
+          "sha256": "c7e6c536e6205e206179862aae8db1ed06376d3abfea4427b349f7600944fec1"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/UnbreakableComponent.cs",
+          "sha256": "fda3f0e43310b6723b20f5329aeb43143158ee2b0e85afe6a59daeb3270ef65d"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/WritableBookContentComponent.cs",
+          "sha256": "dd1e5b2be1914427a0b8d65fe0dbb608fb262e69ca46fb36e86c64d5ee73343e"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_20_6/WrittenBookContentComponent.cs",
+          "sha256": "e2c7f35aa1451c7c23a286bbd42253f213d49c8fa40e54221f09395997e67fcc"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21/JukeBoxPlayableComponent121.cs",
+          "sha256": "aba438fa1dda898ac2ba49c1ee34d59c4e83cb6ec8a9850dfdc7d65d5bc98d07"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_11/AttackRangeComponent.cs",
+          "sha256": "6734b6c27b7f84eab5881080876aedd250e711aebd3315ec60b0cbcda9627451"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_11/KineticWeaponComponent.cs",
+          "sha256": "8e7ea9956abe161c800d3a4449bf30ad081f10095a51969c5cd06e1c24dbc2b8"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_11/PiercingWeaponComponent.cs",
+          "sha256": "da8fdc65d3adbe6b000a736d9cdb82933b3086a039be13145232f6715e0a8937"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_11/RegistryEitherHolderComponent.cs",
+          "sha256": "81dd365ae3b1e9d597bd3fd918b1eef28f6ab55bc7ea944cb93beab2f1a61b4e"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_11/SwingAnimationComponent.cs",
+          "sha256": "72e0ab5c7a830b4334546e754551d0204833fb1b5849840e3611c20a7e8fadea"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_11/UseEffectsComponent.cs",
+          "sha256": "456b7e04c25dc63e19bbbae58d5180849b3ec0371a45e74aa7f323877a5657ff"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/ConsumableComponent.cs",
+          "sha256": "1f459e1fdd85fe2de4661073353079e1f274ca02a8063b28c96f9961cb54864f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/DamageResistantComponent.cs",
+          "sha256": "cdd4d53308af231721dffc6c83048a7e31c3cdeacd3c61f7f3f562b4eebcfdb2"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/DeathProtectionComponent.cs",
+          "sha256": "86b5d69c1c441548e18ceb8b86ec9e5c179dcaec0f4577a8d2fc3c05df9895b5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/EnchantableComponent.cs",
+          "sha256": "43352effc22fa3b0c7ff6a8a374c293d633cc0bba88eac4ace00288352a86d6f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/EquippableComponent.cs",
+          "sha256": "a2c990e3716388e85906830252cb069fba94b074832ca382db014a9d3c7b9fa0"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/FoodComponent1212.cs",
+          "sha256": "cbbc49a7136fc542f36e9406640ec9ec02b50d663117238fe0f67690bbb564f0"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/GliderComponent.cs",
+          "sha256": "591f83ecad9739b00110289a15905eeb23cbfd3cd264d94aa04e15563adb4777"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/ItemModelComponent.cs",
+          "sha256": "294e62666c4162457bf0d0ce2e293b3b2046cc59a035fe9bf838f50d0a26012c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/PotionContentsComponent1212.cs",
+          "sha256": "1a73500007395b6c28197eddc69f8cecd371ca71a79a18513673b9e3b9298f7e"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/RepairableComponent.cs",
+          "sha256": "be3a483f83a6eab51d7a571b0c24a5a835449fb7eb2424ac73c69132cb7af5d5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/TooltipStyleComponent.cs",
+          "sha256": "14d83676fcf6064e90b90703785bb64b869b2502758ccda2c17f24670f6f17bb"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/UseCooldownComponent.cs",
+          "sha256": "b58de4aa0a066e3050c8ffbabd29b5c8e24991c665e9d61099e42be803dd3017"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_2/UseRemainderComponent.cs",
+          "sha256": "361aebbc33e46fef0b8792efcd50f18e2e8bb0632ad9979be63fc0af0a605492"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/AdventureModePredicateComponents1215.cs",
+          "sha256": "c8a7c2a46feed15c8c2d14ea38c4d61e5a74ddee975929f73dd101fb203e86bc"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/AttributeModifiersComponent1215.cs",
+          "sha256": "16183cca0eebd6968e3ff9117cb7099de92f791b1a2ea52d0618c679b4877b78"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/BlocksAttacksComponent.cs",
+          "sha256": "ea950ec23953016494135916e148abbc3b893273a6975de9e1e8d099f791add3"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/DyeColorComponent1215.cs",
+          "sha256": "ea23c32a926d4a3e2ab08a315e18154676ad93c0b6953889817a0821556c3a29"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/EitherHolderComponent.cs",
+          "sha256": "db6b753e69dc9db4cc8aee6b2a0b4cb6401596e8a41dd30a0d3fad16a90bd8a7"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/EnchantmentsComponent1215.cs",
+          "sha256": "8fd45a10c767cc09d13931d8220c918162d022518921771d0c03c7a87179ae97"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/EquippableComponent1215.cs",
+          "sha256": "c934b06cfbb58a08197388d455d75da8cb4f61945b3c35816d23c53aaca9e341"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/InstrumentComponent1215.cs",
+          "sha256": "6022a7a267b7fc7bcd747af3db85ebfbf3a47821c01c21d11c2869a3d8d898ae"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/JukeBoxPlayableComponent1215.cs",
+          "sha256": "e540aa09d51c5bd5631a5ae75a5c676b678f92f6e064a9f283558072083b2b96"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/PaintingVariantHolderComponent.cs",
+          "sha256": "a60f7db87b851ef4388c477a0799db9985b11bf8ebc38f95c6c5fd4cb4d56b84"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/PotionDurationScaleComponent.cs",
+          "sha256": "f6ff84e71cc06773f76b0704b5fa5328a8a63586eec3abd75862ce0b65f78ae4"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/ProvidesBannerPatternsComponent.cs",
+          "sha256": "7f073b1967c63082e72d9c66af1d94b7fe7fd18c49e13f735744467e989755c5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/ProvidesTrimMaterialComponent.cs",
+          "sha256": "c6e409e3ad40827f1efded6fdcf0dc3f8cf10463379b11863574aa4a94a40d3f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/SoundEventHolderComponent.cs",
+          "sha256": "6a3e6cc2d8e256ea77b17b1b1ab6fa418e40488e693080987f88e2d6210f1714"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/StoredEnchantmentsComponent1215.cs",
+          "sha256": "b48475192088a880ccc4d982569859430c7a9d60dd1c96752dc82be514eb8b89"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/ToolComponent1215.cs",
+          "sha256": "f3827e1776e8db7e999bb66c267312508c6e078cb1516ec36583c92cf3e00cab"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/TooltipDisplayComponent.cs",
+          "sha256": "77ad126195032404e72342e5ae0f254af5d765f2746057bff3c9546ddae17d04"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/TrimComponent1215.cs",
+          "sha256": "cc9c2ff09a1d6b27b3cf21843fec3e354665f044b83563542939f23a1ad10d19"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/VarIntComponent.cs",
+          "sha256": "ea71392cd20c84a0558afd24c535eba81b0a3caaaaaffe49a95399b1ad773c3e"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_5/WeaponComponent.cs",
+          "sha256": "810ac4b240f6cd6a34edde71c54a09aacb9c1082f89f11d90d44dddb4ec78fd6"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_8/AttributeModifiersComponent1218.cs",
+          "sha256": "5af004ad370847bec37a727f3866bdac99e98aefe8c61ad1bad516d7631e4070"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_8/EquippableComponent1218.cs",
+          "sha256": "4893581662157df02a7a80647ae185e59e44a6d9d1e951bf899641ba2e7fdf03"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/1_21_9/BeesComponent1219.cs",
+          "sha256": "830272dfd05f7c1a109172405c7d94024d73f984ebc81a48a10fe114f58f6d97"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_1/ContainerComponent261.cs",
+          "sha256": "6cff29e2aded0e693c7ef5800b9f9fdf86e6edf5a36149a6c227683f6352454a"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_1/HolderSetComponent261.cs",
+          "sha256": "859bf67e5cbf111ac010b77e5d8e545c6fbe26579abb18e01f883fa804e98496"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_1/InstrumentComponent261.cs",
+          "sha256": "ff6a9c4894388f95c69905c2d53d5aec1db1696ce6e6f2137a64833c16f3253a"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_1/ItemStackTemplateListComponent261.cs",
+          "sha256": "aeebf6a52d8ccc5bb1ea4b3edae4e1fd5c7c2e7da3674f67cce6e2db50f2dc5b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_1/NbtTagComponent261.cs",
+          "sha256": "85120b98fd3594614fc7978aed757e87a98b33e2551ed82b33215b4390e41903"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_1/ProvidesTrimMaterialComponent261.cs",
+          "sha256": "e6ef0cd3a7a9fe572ed7c0bbca93f38fd3eca522586052b1326fb1a4e2f2e280"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_1/TypedEntityDataComponent261.cs",
+          "sha256": "e7e77c3fc66479d6904b3d3b9edfbf95b008416ae8877aec04e32ba0bf025762"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_1/UseRemainderComponent261.cs",
+          "sha256": "4699c48b57ed4ae56aa4890105136ea469473b18b33adb3bebe480799dd78a41"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/26_2/SulfurCubeContentComponent262.cs",
+          "sha256": "61ca24d976a6b1234bc2eabacb4c6f735d5f24de703626689930535bd8f803fc"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/EmptyComponent.cs",
+          "sha256": "661b1531fb8f0fb062d1c5569d11807f5242f7325a7c93ee228ef90d95e26cf5"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/StructuredComponentCodecHelpers.cs",
+          "sha256": "782b2ca7948e6e3d7dcf53321df344c4ae0cd830cadea9acdb0163071d9756df"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/AttributeSubComponent.cs",
+          "sha256": "fc0d0854d8fe129add6cf3ebeb31ee85e382f24a9ab096cfa342f56a59f05430"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/BlockPredicateSubcomponent.cs",
+          "sha256": "73ce5722398a3cd5e37ec856936740d1ec6854770ba998b052a4eda93c9a7ab4"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/BlockSetSubcomponent.cs",
+          "sha256": "2b35b57677c91dfa45d711081b2309b6cc1f319de3a75f15872fdc5404ce77af"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/DetailsSubComponent.cs",
+          "sha256": "be3f0a0b70bdfea0585cc452acff170d08f6c1fecb18709ce6f962ba39cac67b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/EffectSubComponent.cs",
+          "sha256": "513f62abf714f0696b65426b9143241e7997405250bade8bf507e7c1b9403666"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/FireworkExplosionSubComponent.cs",
+          "sha256": "4890625d257aee1da0dcfe7302ce21a1d59d9ba85d429f2caa673d73955f172c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/PotionEffectSubComponent.cs",
+          "sha256": "a91885d8505a6e7b5d4aa1fff52640205749253dd7889509387bd136c2c08a32"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/PropertySubComponent.cs",
+          "sha256": "9012d765b09750add26c92ec6cb19e63ecb05d22e936b1c4693067a950aa2db7"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_20_6/RuleSubComponent.cs",
+          "sha256": "c6ddac398ab2595eb4704a1b0e083d1a6ab20324aa772e4229f39dc7427f6368"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_21/AttributeSubComponent121.cs",
+          "sha256": "dcae50d4a30616ad2e8763010d0496d158897729ef9a7e9ec33ed7edb7bdd428"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/1_21/SoundEventSubComponent.cs",
+          "sha256": "5abcd8b8965941032a818dac0953201ce27dafe8181a6a236f8aea7451030fdb"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/Subcomponents/SubComponents.cs",
+          "sha256": "cce73ac198d4d4f92d39943f32488758af26cfdb9a42608b9e6372e2168feb33"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Components/TypedEntityDataComponent.cs",
+          "sha256": "81a19e9cde5a32e04c6a92c661cd970559947d1f4c28aeca864d906394e0fd80"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Core/StructuredComponent.cs",
+          "sha256": "ee58cc058d960d1169942cc16f918c601bcdc214fefee144b8dd97ce333ca74d"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Core/StructuredComponentRegistry.cs",
+          "sha256": "f8124fff5a0b0b92b1b9ac381c8be66ceb802e0cce9f2dd349614e5569fb61e3"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Core/SubComponent.cs",
+          "sha256": "5ebda880b01ca8215aa651898e8821c80a80d8d0dba608d79f902ac02513a18b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Core/SubComponentRegistry.cs",
+          "sha256": "d04a7527f59987174f931634adcb885c22b69590e66dad0835e842029277e585"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/StructuredComponentsRegistry1206.cs",
+          "sha256": "c241ea2342f1863362bfa74d1184a6de4b635496c2a35316e12c09ffaa209c97"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/StructuredComponentsRegistry121.cs",
+          "sha256": "521f3105355cdbf18a53df3aca2d6fdd7c8f2bd3bde00ba0786e657ad3d65ba0"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/StructuredComponentsRegistry12111.cs",
+          "sha256": "0ca99b029c14eefef304ac09762df2a51920c940d1f3b601fc617b8f744ef592"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/StructuredComponentsRegistry1212.cs",
+          "sha256": "c02567baae673bc43632afecaa35efcba567635e988527dd960c9cf9fc7d7450"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/StructuredComponentsRegistry1215.cs",
+          "sha256": "1697fd8030ccb0c3a5d956aebb6935f664f009c72296345a4e54b78669fef10e"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/StructuredComponentsRegistry261.cs",
+          "sha256": "f2c90eda0faee96af397375ba34a65b67e576ce8ada07d5c6bba781d715555dd"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/StructuredComponentsRegistry262.cs",
+          "sha256": "63fffe0e83ed9a821e7d470658bc2d1aa7c359e992aa9feed5bdce423c3ec408"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/Subcomponents/SubComponentRegistry1206.cs",
+          "sha256": "5014914758e481de3c49872abf94bbb9a5c588eb27378c7d42349b890663eba6"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/Subcomponents/SubComponentRegistry121.cs",
+          "sha256": "2ac5af4f17e067313e5dd8ba75d7d7ea6e8157f4faec8840e6dd1a829f957883"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/Registries/Subcomponents/SubComponentRegistry1212.cs",
+          "sha256": "660f362c6d92e9a3e6c8232b65ecc94e8293d4a4ff1dbedd15ea352ab3adac18"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/StructuredComponents/StructuredComponentsHandler.cs",
+          "sha256": "e8b39d217d3069f1675dd71ff674cd5fbdd063a89323139d9b3d3647fbdfe11b"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Handlers/ZlibUtils.cs",
+          "sha256": "bd320092c3496527261cffaea3efbe9fd66efc8fbaeb28b8bda74d49964f64c2"
+        },
+        {
+          "path": "MinecraftClient/Protocol/IMinecraftCom.cs",
+          "sha256": "fffa965063db9accc88bb02234d2c1eb486d5364dd2899fa27c7a5177a70517f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/IMinecraftComHandler.cs",
+          "sha256": "a480bf898104e5c0c665c6bfd1c71c16c1ec8082244bf5f99fa5fa09c343596d"
+        },
+        {
+          "path": "MinecraftClient/Protocol/JwtPayloadDecode.cs",
+          "sha256": "a63ddb9046ccdd364a41f384459ed9bd81b03fac083b10192f519b1cef754c94"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Message/ChatMessage.cs",
+          "sha256": "9f6dcda0aa64826e18d45426f72d6af9f50c41e32a9cddcd57aeebeaa7d034cd"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Message/ChatParser.cs",
+          "sha256": "3ae76d40653f2a80b4564ed9f21f140b38e3c422883bcbb242c844b3f6ba1b50"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Message/LastSeenMessageList.cs",
+          "sha256": "d2c656db929161658c1c762215ad4261500076af3e9bffad4dc9180b635a31be"
+        },
+        {
+          "path": "MinecraftClient/Protocol/MicrosoftAuthentication.cs",
+          "sha256": "a7fa3b3e6416dfddce7b9d6eb74a313acaa914ff320da95479ad439041ecd52f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/MojangAPI.cs",
+          "sha256": "28d2b4882274aa5d17db7e2fcba5c298f4e15b1a804b927d942cf2dc283c6829"
+        },
+        {
+          "path": "MinecraftClient/Protocol/PlayerInfo.cs",
+          "sha256": "b724c19c25162e3a4c483f14ca5aa9c0f72f8eb4e11f8c93b35cfd47ae461224"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ProfileKey/KeysCache.cs",
+          "sha256": "574db5872e19adeb79adc4faa621dc6e215e372229b8e6f80970eed58484ea8c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ProfileKey/KeyUtils.cs",
+          "sha256": "bcba9dc8dfd4da283a1d4c380dd6be79eb340a16eae14d53966be1d7e38e7393"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ProfileKey/PlayerKeyPair.cs",
+          "sha256": "385c4b7c63d11044cd6cc7456141c9bf6a045cdaf18fe4375ed95212f3594c71"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ProfileKey/PrivateKey.cs",
+          "sha256": "4abd556e146283780dee76898c48d37624e9d3431327f460f8ccbc325301b600"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ProfileKey/PublicKey.cs",
+          "sha256": "cfb7a48991f1e3111dcba408255ceb86b50fcd3be5aa849819b53844cf5c3f8f"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ProtocolHandler.cs",
+          "sha256": "d35ec122d7d519462e14790def63b701a58ee50406d5bad4912749f27a26697c"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ProxiedWebRequest.cs",
+          "sha256": "2cedec0f1b75d0973ff62e9c4f76a1cc8a1ffdddbb7f14a39f9e6f31dd3032fd"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ReplayHandler.cs",
+          "sha256": "366f9e97d6ddcd6d6a46a7e9d94e4c1181e4c1efc91ed06aeb3fb879f129d2be"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ServerStatusDisplay.cs",
+          "sha256": "bda31c43bcf3bfa84ed12244d5357b9c5bd754c3c255e307570fcd8f7add4bba"
+        },
+        {
+          "path": "MinecraftClient/Protocol/ServerStatusInfo.cs",
+          "sha256": "6bfdf242f2f6e0794cbc5a73c94bef5b81db95f04d8cc0564b49c9795f09a5ad"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Session/SessionCache.cs",
+          "sha256": "4519e523c1e2ae92ff45aae01febe893ac2d6f43bfd2d70f6d4ec15019173dfc"
+        },
+        {
+          "path": "MinecraftClient/Protocol/Session/SessionToken.cs",
+          "sha256": "85850265b51ac5a9f8b7a07f681ea24c488fd53a82c9d2833d4e7c49c54f169e"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Proxy",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Proxy/ProxyHandler.cs",
+          "sha256": "136f5097bb8097ad25abd5e7a5d93fb8b7abb437cd4ef5d0a4ffe6f84603aa53"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Resources",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Resources/AsciiArt/AsciiArt.Designer.cs",
+          "sha256": "6a84326ebd8a97470258531e44e1f50e48450f3d74c47c9793625369789115fa"
+        },
+        {
+          "path": "MinecraftClient/Resources/ConfigComments/ConfigComments.Designer.cs",
+          "sha256": "f7146110b7651f125dd8859d6e12e3a521bd0ede13783dcf5f1a35aa367e61bf"
+        },
+        {
+          "path": "MinecraftClient/Resources/MinecraftAssets.Designer.cs",
+          "sha256": "369963e5ec1989bb26d29a77634f9b1e692978876d29986180aa1def573b8daf"
+        },
+        {
+          "path": "MinecraftClient/Resources/Translations/Translations.Designer.cs",
+          "sha256": "bf3c58c260632018944221952f9a75a10f157decd213be012a88714516525f51"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Scripting",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Scripting/AssemblyResolver.cs",
+          "sha256": "bd8bc3a7257afd0bc2eeec74d2db25417f734d42425d52cdd5a84144ba838e6a"
+        },
+        {
+          "path": "MinecraftClient/Scripting/BotMovementLock.cs",
+          "sha256": "b8e2864a910246e1fb72904ce4b58ee422a2b48a5e3cef039202845ac52c4edd"
+        },
+        {
+          "path": "MinecraftClient/Scripting/ChatBot.cs",
+          "sha256": "3e525d654edde74cede516f396cdd6d8f38e988785c96086bbc89b7489fb6d07"
+        },
+        {
+          "path": "MinecraftClient/Scripting/CSharpRunner.cs",
+          "sha256": "e114485709fd345b2504452d23d0cf20fcba2f7ee0c03ea971e29c0ae85223f3"
+        },
+        {
+          "path": "MinecraftClient/Scripting/DataPath.cs",
+          "sha256": "a2254cf84988765d905491f6bc32fb63e3156a900860ddc5f2ddf2edc57a1712"
+        },
+        {
+          "path": "MinecraftClient/Scripting/DynamicRun/Builder/Compiler.cs",
+          "sha256": "257a4286494284c1d3a22cd4e888a1c57204d39e82c5614bf1a861b9a0d07350"
+        },
+        {
+          "path": "MinecraftClient/Scripting/DynamicRun/Builder/CompileRunner.cs",
+          "sha256": "cba7a59c730ff21420c3471434efd032802e91c3bdd5c453ebd833c4925aab62"
+        },
+        {
+          "path": "MinecraftClient/Scripting/DynamicRun/Builder/SimpleUnloadableAssemblyLoadContext.cs",
+          "sha256": "8cefaa668bce5e4099c37151578fc7215f1b97761b542428c6ccce7e9ea39dd5"
+        },
+        {
+          "path": "MinecraftClient/Scripting/MccGameApi.cs",
+          "sha256": "b9884020aae755bc36a8faee6ffb0d54b92c4eb6ac6ab3fda34fe11f7b4d99cc"
+        },
+        {
+          "path": "MinecraftClient/Scripting/MccGameCommon.cs",
+          "sha256": "c4ce09a8094893c1a240849ef986ce0595c0becc4565ee22fcf59f26e8ae2362"
+        },
+        {
+          "path": "MinecraftClient/Scripting/MccGameModels.cs",
+          "sha256": "7a936e00dd19d9e01fda3b230ee7dc8d076d6b58be6fac25938f3b4d5dd1bf6a"
+        },
+        {
+          "path": "MinecraftClient/Scripting/MccGameResult.cs",
+          "sha256": "84e6fd198fb4090de7deb881451dc4272d24bc401644970bbaafa5c350db1644"
+        },
+        {
+          "path": "MinecraftClient/Scripting/MccObservedState.cs",
+          "sha256": "75545ec0453def2911b5ce8272b8a5011b5ea3c94800a972912981316b4e3888"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "TabList",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/TabList/TabListFormatter.cs",
+          "sha256": "97b9938afce23baed06a6c726242751dd67973414800254595583a09c0ecd8be"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "Tui",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/Tui/BookTuiHost.cs",
+          "sha256": "14d5458e3b960fe03b6b545d2144185d62a44bd03db026e12f4df3d1fc4c185b"
+        },
+        {
+          "path": "MinecraftClient/Tui/BrewingStandView.cs",
+          "sha256": "fb4d592af8c356ed1d59f6dcb6420e6dbd9aeb19962f1cabf4cd330c1241eab4"
+        },
+        {
+          "path": "MinecraftClient/Tui/ContainerViewBase.cs",
+          "sha256": "ef3ec2ff320d25e6f3a7d8d74e5b2d018330d73711a78e307f890e86b53970c1"
+        },
+        {
+          "path": "MinecraftClient/Tui/ContainerViewModel.cs",
+          "sha256": "c843602e2f1062cd05202f2bd00f30d2335d4d546b128fc16b134cd2eb3e5a60"
+        },
+        {
+          "path": "MinecraftClient/Tui/CraftingView.cs",
+          "sha256": "27c1611533ec24f88f83d8809bee3b4e50afe98fe704f37e42d8234a78aca0a0"
+        },
+        {
+          "path": "MinecraftClient/Tui/DialogTuiHost.cs",
+          "sha256": "70b92b80101668b3dea7a50846f9b1ae331384e81f503d6837bad1827e54d6d0"
+        },
+        {
+          "path": "MinecraftClient/Tui/EnchantingTableView.cs",
+          "sha256": "8c33846d74a034449b863801a6fc933c8064edad210a1d4a5171a23fdf95661c"
+        },
+        {
+          "path": "MinecraftClient/Tui/FurnaceView.cs",
+          "sha256": "6b26ffd659244c243b6d9c65adbd4406479a4579916bf1569bfdda05ff8ecf66"
+        },
+        {
+          "path": "MinecraftClient/Tui/GridContainerView.cs",
+          "sha256": "1b8f2e094d46ca8216117373cc32aedac806b8b7da0f8ebdfe71995569b14d5a"
+        },
+        {
+          "path": "MinecraftClient/Tui/GrindstoneView.cs",
+          "sha256": "234b8d724fe75697522b20003e58f4536d15924c4259228f752e72116915972b"
+        },
+        {
+          "path": "MinecraftClient/Tui/HopperView.cs",
+          "sha256": "f82ffa7d1bfd5d3aa657ef0002bf78578cba59476511afff28e19515fcb5e696"
+        },
+        {
+          "path": "MinecraftClient/Tui/IconGridBuilder.cs",
+          "sha256": "fe7c7f8e1ddc6c586f35045209f9995f2dd6ddef3dfed306181e7043e3eb9a39"
+        },
+        {
+          "path": "MinecraftClient/Tui/InventoryApp.cs",
+          "sha256": "27a689ad4481ba0b4d8f2cdcd0c855553c6c042a074cd1b3a7aa1ee94bb657cf"
+        },
+        {
+          "path": "MinecraftClient/Tui/InventoryMainView.cs",
+          "sha256": "8dc252c5fc2d5c69c71124c2f2ee2efc70c49a1bf4c531850f7ba0d3dd791aa3"
+        },
+        {
+          "path": "MinecraftClient/Tui/InventoryTuiHost.cs",
+          "sha256": "ab3ad9d917ae52c6bb9cc3579a539634a2e5b02f210a318aa9c60e03e81e985b"
+        },
+        {
+          "path": "MinecraftClient/Tui/InventoryViewModel.cs",
+          "sha256": "6ad63520c09d7d28365deeb79643b9575d9d1384152c766c3a4bd1f6728d130e"
+        },
+        {
+          "path": "MinecraftClient/Tui/MainTuiView.cs",
+          "sha256": "5366539216aca3ae0929d57174d582fd122ba1111e1ae9e7ffd1be3d35fdf702"
+        },
+        {
+          "path": "MinecraftClient/Tui/MapOverlay.cs",
+          "sha256": "57659c01a6146b7b063bac203e2a6867709fc5688500a9ee307e9329d1d6fd6e"
+        },
+        {
+          "path": "MinecraftClient/Tui/MccBannerPanelBuilder.cs",
+          "sha256": "31e204d8b63dcedd194a81a6a9a2f2415bf28afdd522ebe4f09d121ef4d70888"
+        },
+        {
+          "path": "MinecraftClient/Tui/McColorParser.cs",
+          "sha256": "130e21276eed86782cce1b35e478a5e66494a8c534957b800341e85b49b85698"
+        },
+        {
+          "path": "MinecraftClient/Tui/MccTuiApp.cs",
+          "sha256": "1b3af499fb3e2b7a85038f5e36b43363b5ed487323b16b7e28ca94cb155a8d56"
+        },
+        {
+          "path": "MinecraftClient/Tui/MinimapColorMap.cs",
+          "sha256": "2113f4e96116665780abbc1bec8c9c93d6f65ec5b6b70ec4a507e6c2aea4cdc3"
+        },
+        {
+          "path": "MinecraftClient/Tui/MinimapControl.cs",
+          "sha256": "09aa058929bbbec0c96c3f712fd800c4573df8449b7bb8e00f50fd06da619ac1"
+        },
+        {
+          "path": "MinecraftClient/Tui/MinimapEntityClassifier.cs",
+          "sha256": "d7e95c03f0414fb261aea15622563a297de1009349b71b21ad087355094e5ea7"
+        },
+        {
+          "path": "MinecraftClient/Tui/ServerStatusPanelBuilder.cs",
+          "sha256": "32da1773bcb013fecc8921a48d3d0a60efc33aa47746293c7af9e21568689de2"
+        },
+        {
+          "path": "MinecraftClient/Tui/SlotViewModel.cs",
+          "sha256": "6d175719d9c2d794c3939f4af6a04ae2dc72bb66b74842fa5ecc038aa11189e0"
+        },
+        {
+          "path": "MinecraftClient/Tui/TabListOverlay.cs",
+          "sha256": "05a263556b076341cb7f267648295b0c9abedbb18774d9808cd26cdc24d39dac"
+        },
+        {
+          "path": "MinecraftClient/Tui/TuiConsoleBackend.cs",
+          "sha256": "c0b6a29f29d9364cc79850dc744bd2a47ab28a5f239ddd8940ac5b50fc83d6d3"
+        },
+        {
+          "path": "MinecraftClient/Tui/TuiTooltipService.cs",
+          "sha256": "ece6998269945372d4e9a0ea46cbf35c620a5183249d588a7247caa916646fb4"
+        }
+      ],
+      "fullPortStatus": "pending"
+    },
+    {
+      "name": "WinAPI",
+      "sourceFiles": [
+        {
+          "path": "MinecraftClient/WinAPI/ConsoleIcon.cs",
+          "sha256": "46e4f6af8dd9210f1ded192a2be24f157fe2aadee7a75ac6f1d5a7dd201efc2e"
+        },
+        {
+          "path": "MinecraftClient/WinAPI/ExitCleanUp.cs",
+          "sha256": "f92a74bf9bfa9a7dc2b2982bdae87b9b8a49971eea6b2061531195469165fe32"
+        }
+      ],
+      "fullPortStatus": "pending"
+    }
+  ],
+  "rootSources": [
+    "MinecraftClient/Achievement.cs",
+    "MinecraftClient/AutoTimeout.cs",
+    "MinecraftClient/ClassicConsoleBackend.cs",
+    "MinecraftClient/ColorHelper.cs",
+    "MinecraftClient/Command.cs",
+    "MinecraftClient/ConnectionAttemptLifecycle.cs",
+    "MinecraftClient/ConsoleInputRouter.cs",
+    "MinecraftClient/ConsoleIO.cs",
+    "MinecraftClient/ExtensionMethods.cs",
+    "MinecraftClient/FileMonitor.cs",
+    "MinecraftClient/IConsoleBackend.cs",
+    "MinecraftClient/INIFile.cs",
+    "MinecraftClient/Json.cs",
+    "MinecraftClient/LegacyAchievementCatalog.cs",
+    "MinecraftClient/McClient.cs",
+    "MinecraftClient/Program.cs",
+    "MinecraftClient/RecipeBookRecipeEntry.cs",
+    "MinecraftClient/RestartCoordinator.cs",
+    "MinecraftClient/Settings.cs",
+    "MinecraftClient/TaskWithDelay.cs",
+    "MinecraftClient/TaskWithResult.cs",
+    "MinecraftClient/UpgradeHelper.cs"
+  ]
+}

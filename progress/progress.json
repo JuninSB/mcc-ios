@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": "PORT LOG / 019",
+  "revision": "PORT LOG / 020",
   "updated": "2026-11-05",
-  "status": "Em desenvolvimento",
-  "summary": "Minecraft Console Client local para iSH em desenvolvimento. O executável principal já troca chat e comandos com Paper 1.21.11 nos testes Windows. Faltam validação no destino e autenticação real.",
-  "methodology": "Percentual calculado pelos marcos verificados, todos com o mesmo peso. Não representa a quantidade de Minecraft implementada. Testes no Windows não comprovam execução no iSH.",
+  "status": "Porte completo em andamento",
+  "summary": "Meta: portar todos os recursos do MCC atual para iSH. O cliente de console existente é um protótipo parcial. TUI/minimapa, inventário, mundo, movimento, bots, scripts e integrações fazem parte da entrega completa.",
+  "methodology": "Marcos de mesmo peso, não porcentagem de funcionalidades do Minecraft. O escopo foi corrigido para incluir o MCC atual completo. Os 59% anteriores mediam somente o núcleo parcial. Nenhum módulo moderno completo está validado no iSH.",
   "target": {
     "status": "Ainda não validado",
     "detail": "Sem execução em dispositivo nesta etapa. O iOS, as syscalls e o desempenho do emulador ainda precisam de teste.",
@@ -48,6 +48,10 @@
     {
       "id": "auth",
       "title": "04 / Autenticação e sessão online"
+    },
+    {
+      "id": "full",
+      "title": "05 / MCC atual completo, sem remoção de recursos"
     }
   ],
   "milestones": [
@@ -203,13 +207,139 @@
       "scope": "Windows e Alpine 3.22.8 x86/Mono / Paper real controlado",
       "evidence": "Executável principal compilado com Mono passou no Paper real: INI, entrada, /version, chat com eco e /exit zero. Suíte de protocolo também passou no Alpine x86. Modo offline explícito de teste; Microsoft, assinatura e iSH real ainda não validados.",
       "artifact": "tests/ish_interactive_modern.py"
+    },
+    {
+      "id": "full-runtime",
+      "group": "full",
+      "title": "Runtime e código moderno completos",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/MinecraftClient.csproj"
+    },
+    {
+      "id": "full-tui",
+      "group": "full",
+      "title": "TUI completa e minimapa",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Tui/"
+    },
+    {
+      "id": "full-inventory",
+      "group": "full",
+      "title": "Inventário, containers e APIs de itens",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Inventory/"
+    },
+    {
+      "id": "full-world",
+      "group": "full",
+      "title": "Mundo, chunks, terreno e entidades",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Mapping/"
+    },
+    {
+      "id": "full-physics",
+      "group": "full",
+      "title": "Movimento, física, colisão e pathfinding",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Physics/"
+    },
+    {
+      "id": "full-commands",
+      "group": "full",
+      "title": "Todos os comandos, argumentos e completadores",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Commands/"
+    },
+    {
+      "id": "full-bots",
+      "group": "full",
+      "title": "Todos os bots e automações atuais",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/ChatBots/"
+    },
+    {
+      "id": "full-scripts",
+      "group": "full",
+      "title": "Scripts C# dinâmicos e API de extensões",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Scripting/"
+    },
+    {
+      "id": "full-integrations",
+      "group": "full",
+      "title": "Bridges e integrações, incluindo imagens",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/MinecraftClient.csproj"
+    },
+    {
+      "id": "full-mcp",
+      "group": "full",
+      "title": "MCP, ferramentas e transportes atuais",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Mcp/"
+    },
+    {
+      "id": "full-config",
+      "group": "full",
+      "title": "Configuração moderna, logs, traduções e recursos",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Settings.cs"
+    },
+    {
+      "id": "full-versions",
+      "group": "full",
+      "title": "Todas as versões e palettes do cliente atual",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Protocol/"
+    },
+    {
+      "id": "full-online",
+      "group": "full",
+      "title": "Autenticação, assinatura e recursos premium completos",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "MinecraftClient/Protocol/ProfileKey/"
+    },
+    {
+      "id": "full-device",
+      "group": "full",
+      "title": "Paridade de todos os recursos em iSH real",
+      "status": "pending",
+      "scope": "Escopo integral solicitado, ainda não validado",
+      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "artifact": "progress/full-scope.json"
     }
   ],
   "nextSteps": [
-    "Confirmar a versão do Alpine no iSH real e executar o cliente no iPhone.",
-    "Validar login Microsoft legítimo, propriedade do jogo, renovação e sessão online criptografada.",
-    "Implementar e validar assinatura de chat 1.21.11.",
-    "Medir memória, tempo de início e estabilidade no iSH."
+    "Resolver runtime/dependências para executar o cliente moderno integral no Alpine x86.",
+    "Preservar e portar TUI/minimapa, inventário, mundo, movimento, comandos, bots, scripts e integrações.",
+    "Validar autenticação Microsoft, assinatura, renovação e todas as versões atuais.",
+    "Testar cada recurso no iSH real e medir desempenho/estabilidade."
   ],
   "timeline": [
     {
@@ -371,6 +501,11 @@
       "date": "2026-11-05",
       "title": "Suíte Mono completa e Paper real passaram; fonte publicada",
       "detail": "MCC_ALPINE_TEST_PASS e MCC_ALPINE_RESUME_EXIT=0 confirmaram testes de protocolo, criptografia, exceções e TLS/OAuth negativo. Executável Mono também passou no Paper real com comando/chat/saída. Código publicado na branch ish-port, sem INSTRUÇÕES.txt nem alteração de workflows. Validação em iSH real continua pendente."
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Escopo corrigido para porte 100% do MCC atual",
+      "detail": "Usuário reforçou que exige todos os recursos. Inventariados 18 módulos, 525 fontes C# e 19 dependências. Probe net472 falhou em Consolonia e MCP/ASP.NET; Magick.NET sem nativo Linux x86. Adicionados 14 marcos integrais pendentes. O percentual anterior cobria apenas o núcleo e não representava o porte completo."
     }
   ]
 }

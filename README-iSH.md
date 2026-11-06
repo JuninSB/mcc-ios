@@ -1,5 +1,11 @@
 # MCC para iSH
 
+**Escopo requerido: porte completo do MCC atual.** O runtime em `ports/ish` é o
+protótipo parcial já testado, não a entrega final. TUI/minimapa, inventário, mundo,
+movimento, todos os comandos/bots, scripts e integrações estão no escopo obrigatório.
+O inventário completo e os bloqueios medidos ficam em `progress/full-scope.json`
+e `ports/full/ASSESSMENT.md`. O percentual antigo do núcleo não mede o porte integral.
+
 Porte de compatibilidade do MCC histórico para Mono e Alpine Linux **x86 de 32 bits**.
 Destinado a executar o cliente localmente no iPhone, sem SSH, VPS ou computador durante
 o uso. A execução em iSH real ainda precisa de validação.
