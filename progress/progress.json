@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "PORT LOG / 022",
+  "revision": "PORT LOG / 023",
   "updated": "2026-11-06",
   "status": "Porte completo em andamento",
   "summary": "Meta: portar todos os recursos do MCC atual para iSH. O cliente de console existente é um protótipo parcial. TUI/minimapa, inventário, mundo, movimento, bots, scripts e integrações fazem parte da entrega completa.",
@@ -214,7 +214,7 @@
       "title": "Runtime e código moderno completos",
       "status": "pending",
       "scope": "Escopo integral solicitado, ainda não validado",
-      "evidence": "CoreLib do Mono moderno compilou para Linux x86 com zero erros/avisos no host. Configuração CMake passou no Alpine 3.22.8 x86 e iniciou build nativo. Execução do runtime, bibliotecas restantes e MCC completo ainda pendentes. Procedimento e resultados em ports/full/MODERN-MONO.md.",
+      "evidence": "CoreLib do Mono moderno compilou para Linux x86 com zero erros/avisos no host. CMake passou no Alpine x86; VM encerrada a pedido do usuário para liberar RAM, com build nativo incompleto. Compilação cruzada no Windows em investigação. Execução do runtime e MCC completo ainda pendentes. Resultados em ports/full/MODERN-MONO.md.",
       "artifact": "MinecraftClient/MinecraftClient.csproj"
     },
     {
@@ -521,6 +521,11 @@
       "date": "2026-11-06",
       "title": "CoreLib moderna para Linux x86 compilou; build nativo iniciado",
       "detail": "Configuração CMake passou no Alpine x86 e iniciou 363 etapas nativas. CoreLib do Mono .NET 10 compilou no host com zero erros/avisos, TARGET_X86/TARGET_32BIT e reflexão emit preservados. Corrigidos arquitetura dos geradores, caminhos de ILLink e resolução do SDK para TaskHost. SHA-256 e comandos em ports/full/MODERN-MONO.md. Ainda não executado: não representa runtime completo nem paridade do MCC."
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Emulador encerrado para liberar RAM durante builds no host",
+      "detail": "QEMU encerrado após pelo menos 45 de 363 etapas nativas para liberar RAM. O usuário esclareceu depois que a VM pode rodar quando estiver fazendo trabalho necessário. Código e CoreLib salvos no host; objetos temporários da VM sem disco não preservados. Build nativo incompleto. Experimento de compilação cruzada no Windows reconheceu Clang e alvo Linux x86, ainda sem resultado final."
     }
   ]
 }

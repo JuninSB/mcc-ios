@@ -50,7 +50,21 @@ explicitly installs `llvm20`. In the same VM, installing that package allowed co
 to resume: CMake reported `CMAKE_SYSTEM_PROCESSOR=x86`, `TARGET_ARCH=x86` and
 `CMAKE_CROSSCOMPILING=FALSE`, then began its native header/function checks.
 Native configuration subsequently passed (`MCC_MODERN_MONO_CONFIGURE_PASS`),
-producing a 363-step Ninja build. Native compilation is still in progress.
+producing a 363-step Ninja build. Compilation reached at least step 45 before
+the VM was stopped at the user's request to free host RAM. The native build did
+not complete. Its temporary objects were in the diskless guest's RAM filesystem
+and were not retained; the pinned source archive and successful CoreLib output
+remain on the host. Clang reported `-Wsync-alignment` in Mono's 64-bit atomic
+helper on x86. That warning has not been suppressed or established harmless.
+
+The user subsequently clarified that the VM may run when it is doing necessary
+compilation work; its shutdown was based on an assumption that it was idle.
+Prefer host builds where practical to reduce pressure on this 4 GiB host.
+A Windows-host cross-configuration
+experiment using Zig 0.15.2, CMake 4.1.2 and Ninja 1.13.1 has identified the Linux
+x86 target and compiler ABI; configuration and linking are still unproven.
+Restart a small Alpine guest later when an executable actually needs runtime
+validation or necessary native compilation.
 
 ## Managed CoreLib build
 
