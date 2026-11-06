@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "PORT LOG / 021",
+  "revision": "PORT LOG / 022",
   "updated": "2026-11-06",
   "status": "Porte completo em andamento",
   "summary": "Meta: portar todos os recursos do MCC atual para iSH. O cliente de console existente é um protótipo parcial. TUI/minimapa, inventário, mundo, movimento, bots, scripts e integrações fazem parte da entrega completa.",
@@ -214,7 +214,7 @@
       "title": "Runtime e código moderno completos",
       "status": "pending",
       "scope": "Escopo integral solicitado, ainda não validado",
-      "evidence": "O protótipo legado não comprova paridade deste recurso. Inventário de fontes e dependências em full-scope.json; validação funcional no destino permanece obrigatória.",
+      "evidence": "CoreLib do Mono moderno compilou para Linux x86 com zero erros/avisos no host. Configuração CMake passou no Alpine 3.22.8 x86 e iniciou build nativo. Execução do runtime, bibliotecas restantes e MCC completo ainda pendentes. Procedimento e resultados em ports/full/MODERN-MONO.md.",
       "artifact": "MinecraftClient/MinecraftClient.csproj"
     },
     {
@@ -516,6 +516,11 @@
       "date": "2026-11-06",
       "title": "Experimento de compilação do Mono moderno iniciado",
       "detail": "Fontes oficiais .NET 10 ainda possuem caminhos x86 e musl. Experimento com fonte fixada por SHA-256 iniciou no Alpine 3.22.8 x86. A primeira configuração falhou por llvm-ar ausente; adicionado llvm20 e retomado na mesma VM. CMake confirmou TARGET_ARCH=x86 e iniciou verificações nativas. Build, bibliotecas gerenciadas e execução de MCC continuam pendentes; nenhum marco integral concluído."
+    },
+    {
+      "date": "2026-11-06",
+      "title": "CoreLib moderna para Linux x86 compilou; build nativo iniciado",
+      "detail": "Configuração CMake passou no Alpine x86 e iniciou 363 etapas nativas. CoreLib do Mono .NET 10 compilou no host com zero erros/avisos, TARGET_X86/TARGET_32BIT e reflexão emit preservados. Corrigidos arquitetura dos geradores, caminhos de ILLink e resolução do SDK para TaskHost. SHA-256 e comandos em ports/full/MODERN-MONO.md. Ainda não executado: não representa runtime completo nem paridade do MCC."
     }
   ]
 }

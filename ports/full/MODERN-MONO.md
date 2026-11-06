@@ -8,6 +8,7 @@ Pinned upstream source:
 
 - URL: https://codeload.github.com/dotnet/runtime/tar.gz/refs/tags/v10.0.0
 - SHA-256: `cbc351c6f7afa4fcb622c8faf09f2371933fbd1413672556a410e3bfff061ddf`
+- Tag commit: `60629d14374c56f1cb51819049ad1fa529307f8d`
 - Official build instructions: https://github.com/dotnet/runtime/blob/v10.0.0/docs/workflow/building/mono/README.md
 
 The normal complete build is `./build.sh mono+libs`. The experiment in
@@ -48,5 +49,38 @@ tool, not evidence that the runtime cannot support x86. The guest setup now
 explicitly installs `llvm20`. In the same VM, installing that package allowed configuration
 to resume: CMake reported `CMAKE_SYSTEM_PROCESSOR=x86`, `TARGET_ARCH=x86` and
 `CMAKE_CROSSCOMPILING=FALSE`, then began its native header/function checks.
-The configure/build result is still pending. No managed-library or MCC runtime
-result exists yet.
+Native configuration subsequently passed (`MCC_MODERN_MONO_CONFIGURE_PASS`),
+producing a 363-step Ninja build. Native compilation is still in progress.
+
+## Managed CoreLib build
+
+Run on a development host with .NET SDK 10 installed:
+
+```sh
+python ports/full/build-modern-corelib.py /path/to/runtime-10.0.0
+```
+
+The helper builds the existing Mono `System.Private.CoreLib` project, retaining
+`TARGET_X86`, `TARGET_32BIT`, `TARGET_LINUX` and reflection emit. Build-time
+generators remain AnyCPU so the host's x64 compiler can load them. `Platform`
+must be inferred by the Mono project, rather than globally forced on all its
+tool projects: forcing it changes the ILLink output directory and breaks task
+resolution. A clean rebuild is needed after changing assembly architecture.
+
+The helper also resolves the actual installed SDK directory and supplies
+`NetCoreSdkRoot`. Recent MSBuild falls back to `RuntimeIdentifierGraphPath` when
+that property is absent in SDK 10; the runtime repository overrides that graph
+path, so the fallback otherwise identifies the source directory as an SDK and
+reports an empty SDK version. This workaround preserves the build tasks.
+
+The helper passed on the Windows build host with SDK 10.0.402, zero warnings and
+zero errors. Output:
+
+`artifacts/bin/mono/linux.x86.Release/System.Private.CoreLib.dll`
+
+SHA-256: `686976c01273b7651bc16aea825a386a7cd7d492f8c38249d48d19b0b7aebfc0`.
+
+This proves compilation of the modern Mono CoreLib for the target definitions.
+It does not prove execution, a complete library distribution, or MCC/iSH
+compatibility. Native runtime, library shims, remaining libraries, deployment and
+feature-specific tests are still required.
